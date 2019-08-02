@@ -1,0 +1,75 @@
+@import "../../index.scss";
+
+.navbar-nav {
+    .nav-link {
+        color: color(orange) !important;
+        font-size: 22px !important; 
+        display: flex !important; 
+        justify-content: center;   
+    }
+    .nav-link:hover {
+        color: color(redHover) !important;
+    }
+}
+.dropdown .nav-item {
+    margin: auto !important;
+}
+.mr-auto {
+    margin: 0 !important;
+}
+.navbar-nav .active>.nav-link, .navbar-nav .nav-link.active {
+    color: rgb(238, 105, 105) !important;   
+}
+.bg-dark {
+    background-color: #000000!important; 
+}
+#basic-navbar-nav {
+    width: 400px !important;    
+}
+.navbar-toggler {  
+    border-color: color(orange) !important;
+    padding: .25rem .65rem;
+    margin: 4.5px;
+}
+.navbar-toggler-icon {
+    background-image: url('../../images/burger.png') !important;
+}
+button.navbar-toggler:focus {
+    outline: none;
+}
+.dropdown-toggle::after {
+    margin-top: 12px;
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse { 
+        justify-content: center
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+    }
+}
+.dropdown-menu {
+    background-color: #000;
+    color: color(orange) !important;
+}
+.dropdown-item { 
+    color: color(orange);
+}
+.dropdown-item:hover{ 
+    color:  color(redHover);
+    background-color: #000;
+}
+.d-inline-block .align-top {  
+    width: 85px;  
+    height: 70px;    
+}
+.navbar .navbar-expand-lg .navbar-light bg-dark{
+    height: 75px !important;
+}
+.d-inline-block {   
+    width: 50px;  
+    height: 53px;  
+    position: absolute;
+    top: 7px;
+    left: 40px;
+}
