@@ -4,7 +4,7 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './Components/Navbar/Navbar'
 import ProductList from './Components/ProductList/ProductList'
-import Products from './Components/Products/Products'
+import Product from './Components/Product/Product'
 import Details from './Components/Details/Details'
 import Default from './Components/Default/Default'
 import Contact from './Components/Contact/Contact'
@@ -17,8 +17,8 @@ function App() {
            <Navbar />      
            <Router>
                <Switch>
-                   <Route exact path="/" component={ProductList} />
-                   <Route path="/Products" component={Products} />
+                   <Route exact path="/" component={ProductList} />                  
+                   <Route path="/Details" component={Details} />
                    <Route path="/Contact" component={Contact} />
                    <Route path="/Cart" component={Cart} />                   
                    <Route component={Default} />

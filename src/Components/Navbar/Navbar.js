@@ -5,13 +5,13 @@ import NavDropdown from '../../../node_modules/react-bootstrap/NavDropdown';
 // import Form from '../../../node_modules/react-bootstrap/Form';
 // import FormControl from '../../../node_modules/react-bootstrap/FormControl';
 // import Button from '../../../node_modules/react-bootstrap/Form';
-import logo from '../../images/phone.png'
+import logo from '../../images/logo.png'
 import './Navbar.scss'
 
 function NavbarMain() {
     return (
         <Navbar bg="dark" expand="lg" fixed="top">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
                 <img src={logo} 
                     width="50"
                     height="50%"
@@ -22,7 +22,7 @@ function NavbarMain() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="./">Home</Nav.Link>
-                    <Nav.Link href="./Products">Products</Nav.Link>
+                    <Nav.Link href="./">Product</Nav.Link>
                     <Nav.Link href="/Details">Details</Nav.Link>
                     <Nav.Link href="./Cart"><i className="fas fa-cart-plus mx-2"></i>Cart</Nav.Link>
                     <Nav.Link href="./Contact">Contact</Nav.Link>

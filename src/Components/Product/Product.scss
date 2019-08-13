@@ -1,0 +1,75 @@
+@import "../../index.scss";
+
+.product {
+    padding: 5px;
+
+    .card {  
+        border: 1px solid green; 
+        box-sizing: border-box;            
+    
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            height: 80px;
+            display: flex;       
+            justify-content: center;
+            padding-top: .3em;
+        }
+        img {
+            display: block;
+            width: 60%;
+            margin: auto;
+            transform: scale(1);       
+        }
+    
+        p {
+            display: block;
+            margin-top: 3em;
+            font-weight: bold;
+            text-align: center;
+        }
+        a {
+            padding-bottom: 25px;
+        }
+        .cartBtn {
+            // display: none;
+            position: absolute;
+            bottom: 100px;
+            right: 0;
+            transform: translate(-700%,100%);  
+            background: transparent;    
+            border: none;    
+            color: color(red);
+            font-size: 1.4em;
+            padding: 2px 8px 2px 6px;
+            &:hover {
+                color: color(green);
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &:hover {
+            box-shadow: 2px 2px 12px #000;
+            transition: .2s;
+        }
+        &:hover img{
+            transform: scale(1.175);
+            transition: .2s;
+        }
+        &:hover button{
+            display: block;
+            transform: translate(-20%, 100%);         
+            transition: .7s;            
+        }   
+        &:hover span {
+            color: color(green);
+        }        
+        .cardFooter {           
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+        }
+    }
+}
+
