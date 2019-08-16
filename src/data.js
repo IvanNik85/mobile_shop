@@ -5,7 +5,7 @@ export const storeProducts = [
         img: "images/huawei-p20.jpg",
         price: "449$",
         description: 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex     corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem     laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
         inCart: false,
         count: 0,
         total: 0, 
@@ -16,7 +16,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex     corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem     laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -27,7 +27,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex     corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem     laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -38,7 +38,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex     corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem     laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -49,7 +49,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-        "The Samsung Galaxy A50 in black color is a Dual SIM smartphone with 128GB of storage and 4GB of RAM, 6.4 inches FHD+ Super AMOLED screen, 25+8+5MP triple rear camera, 25MP selfie camera, Octa-Core Exynos processor 9610 (10nm), 4000mAh battery, fingerprint reader on the screen.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: true,
     count: 0,
     total: 0, 
@@ -60,7 +60,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "284$",
     description: 
-        "The Nokia 8.1 in Iron Steel color is a Dual SIM smartphone with full HD+ screen of 6.18 inches , 12+13MP rear camera and 20MP front camera, Android 9 Pie and Qualcomm Snapdragon 710 processor.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -71,7 +71,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "264$",
     description: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex         corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem         laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -82,7 +82,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "379$",
     description: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex         corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem         laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -93,7 +93,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex         corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem         laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -104,7 +104,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex         corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem         laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -115,7 +115,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex         corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem         laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 
@@ -126,7 +126,7 @@ export const storeProducts = [
     img: "images/huawei-p20.jpg",
     price: "100$",
     description: 
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ex         corporis quibusdam tenetur itaque minima quaerat non est similique voluptatem         laborum ipsam exercitationem mollitia consectetur suscipit alias, quidem, id dicta?",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
     total: 0, 

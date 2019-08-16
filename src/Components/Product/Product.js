@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "./Product.scss"
 import {Link} from "react-router-dom"
 import {ProductConsumer} from "../../Context"
+import PropTypes from "prop-types"
 
 export default class Product extends Component {
     render() {
@@ -27,4 +28,12 @@ export default class Product extends Component {
             </div>
         )
     }
+}
+Product.propTypes = {
+    product: PropTypes.shape({
+        id: PropTypes.number,
+        img: PropTypes.string,
+        price: PropTypes.string,
+        inCart: PropTypes.bool
+    }).isRequired
 }

@@ -1,0 +1,19 @@
+$btnColor: #007bc6;
+
+button {
+    padding: 5px 10px;
+    border: 2px solid $btnColor;
+    border-radius: 5px;
+    font-weight: bold;
+    color: $btnColor;
+    background-color: #fff;
+    margin-right: 15px;
+
+    &:focus {
+        outline: none;
+    }
+    // &:hover {
+    //     background-color: $btnColor;
+    //     color: #fff;
+    // }
+}

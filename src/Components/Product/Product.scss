@@ -4,7 +4,7 @@
     padding: 5px;
 
     .card {  
-        border: 1px solid green; 
+        border: 1px solid rgba(0, 128, 0, .5); 
         box-sizing: border-box;            
     
         h1 {
@@ -47,8 +47,8 @@
             }
             &:focus {
                 outline: none;
-            }
-        }
+            } 
+        }        
         &:hover {
             box-shadow: 2px 2px 12px #000;
             transition: .2s;
@@ -57,7 +57,7 @@
             transform: scale(1.175);
             transition: .2s;
         }
-        &:hover button{
+        &:hover .cartBtn{
             display: block;
             transform: translate(-20%, 100%);         
             transition: .7s;            
@@ -69,7 +69,23 @@
             position: relative;
             height: 100px;
             overflow: hidden;
+            p {
+                margin: 35px;
+                font-size: 1.2em;
+            }        
         }
     }
 }
+@media (min-width: 420px) and (max-width: 992px) {
+    .card {
+        .cartBtn {
+            transform: translate(-1000%,100%) !important;       
+        }    
+    
+    &:hover .cartBtn{       
+        transform: translate(-20%, 100%) !important;  
+    }  
+}
+}
+
 
