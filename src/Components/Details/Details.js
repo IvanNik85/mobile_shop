@@ -3,8 +3,12 @@ import {ProductConsumer} from "../../Context"
 import {Link} from "react-router-dom"
 import "./Details.scss"
 import Button from "../Button/Button"
+import { Redirect } from 'react-router-dom'
 
 export default class Details extends Component {
+    componentDidMount() {
+       return <Redirect to='/' />
+    }
     render() {
         return (
             <ProductConsumer>
@@ -31,13 +35,13 @@ export default class Details extends Component {
                                     <h4>Price: {price}</h4>
                                    <p className="text-muted">{description}</p>
                                    <Link to="/">
-                                        <Button text="Back to products" class="cart"/>
+                                        <Button text="Back to products" classN="blue"/>
                                     </Link>
                                     <Link to="/Cart">
                                         <Button 
                                             text={inCart ? "in cart" : "Add to cart"}                                        
                                             disab={inCart ? true : false}
-                                            class="cart1"
+                                            classN="red"
                                         />
                                     </Link>
                                 </div>

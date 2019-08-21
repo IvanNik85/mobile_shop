@@ -5,7 +5,7 @@ import Product from "../Product/Product"
 export default class ProductList extends Component {
     render() {
         return (
-            <div className="container">               
+            <div className="container" id="ProductList">               
                <div className="row">
                     <ProductConsumer>
                         {val => {

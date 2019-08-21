@@ -19,7 +19,9 @@ function App() {
            {/* <Home />    */}
            <Router>
                <Switch>
-                   <Route exact path="/" component={ProductList} />                  
+                   {/* <Route exact path="/" component={Home} />    */}
+                   <Route exact path="/" component={Home} /> 
+                   <Route path="/ProductList" component={ProductList} />                 
                    <Route path="/Details" component={Details} />
                    <Route path="/Contact" component={Contact} />
                    <Route path="/Cart" component={Cart} />                   

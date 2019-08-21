@@ -1,5 +1,6 @@
 @import "../../index.scss";
-$btnColor1: #ec164c;
+@import "../Button/Button.scss";
+
 h1 {
     text-align: center;
 }
@@ -8,20 +9,20 @@ h1 {
         margin: 35px 35px 35px 0 !important; 
         font-size: 1.2em;
     }   
-    button.cart1 {
-        display: inline-block !important;
-        border: 2px solid $btnColor1;
-        color: $btnColor1;
+    // button.cart1 {
+    //     display: inline-block !important;
+    //     border: 2px solid $btnColor1;
+    //     color: $btnColor1;
         
-        &:hover {
-            background-color: $btnColor1;
-            color: #fff;
-        }
-    }
-    button.cart {
-        &:hover {
-            background-color: color(basicBlue);
-            color: #fff;
-        }
-    }
+    //     &:hover {
+    //         background-color: $btnColor1;
+    //         color: #fff;
+    //     }
+    // }
+    // button.cart {
+    //     &:hover {
+    //         background-color: color(basicBlue);
+    //         color: #fff;
+    //     }
+    // }
 }

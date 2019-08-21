@@ -1,19 +1,36 @@
-$btnColor: #007bc6;
+$blueBtn: #007bc6;
+$redBtn: #ec164c;
+$orangeBtn: #f48021;
 
-button {
-    padding: 5px 10px;
-    border: 2px solid $btnColor;
+.btn {
+    padding: 5px 10px;    
     border-radius: 5px;
-    font-weight: bold;
-    color: $btnColor;
+    font-weight: bold;    
     background-color: #fff;
     margin-right: 15px;
 
     &:focus {
-        outline: none;
+        outline: none !important;
     }
-    // &:hover {
-    //     background-color: $btnColor;
-    //     color: #fff;
-    // }
+    &:hover {       
+        color: #fff !important;
+    }
+}
+
+@mixin buttonColor($btnColor) {
+    border: 2px solid $btnColor;
+    color: $btnColor;
+    &:hover {
+        background-color: $btnColor;
+    }
+}
+
+.blue {
+    @include buttonColor($blueBtn);
+}
+.red{
+    @include buttonColor($redBtn);
+}
+.orange{
+    @include buttonColor($orangeBtn);
 }
