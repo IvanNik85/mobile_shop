@@ -16,7 +16,7 @@
         font-size: 60px;    
         margin: auto; 
         opacity: 0;   
-        animation: delayHeader 1.5s ease 1.2s forwards; 
+        animation: delayHeader 1.5s ease 1.4s forwards; 
         
         @media (min-width: 768px) {
             display: inline-block;
@@ -54,7 +54,8 @@
             text-align: center;       
             border: 2px solid color(basicRed);
             border-radius: 5px; 
-            margin-bottom: 25px;       
+            margin-bottom: 25px;  
+            transition: .2s;     
             a {    
                 cursor: pointer;
                 display: block;
@@ -75,11 +76,11 @@
                     box-sizing: border-box;   
                     border-radius: 5px;
                     opacity: 0.2;    
-                    animation: pulse 1.5s infinite alternate;               
+                    animation: pulse 1.5s 1.7s infinite alternate;               
                 }  
             } 
             &:hover {
-                background-color: color(basicRed);           
+                background-color: color(basicRed); //#9f1344;          
             }  
         }
         @media (max-width: 768px) {

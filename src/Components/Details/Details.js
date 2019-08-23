@@ -3,16 +3,12 @@ import {ProductConsumer} from "../../Context"
 import {Link} from "react-router-dom"
 import "./Details.scss"
 import Button from "../Button/Button"
-import { Redirect } from 'react-router-dom'
 
-export default class Details extends Component {
-    componentDidMount() {
-       return <Redirect to='/' />
-    }
+export default class Details extends Component {  
     render() {
         return (
             <ProductConsumer>
-                {(value) => {                   
+                {value => {                   
                    const {
                        id,
                        title,
@@ -20,7 +16,7 @@ export default class Details extends Component {
                        price,
                        description,
                        inCart
-                   } = value.products[0];
+                   } = value.detailProduct;
                    return (
                         <div className="container">
                             <div className="row">

@@ -19,7 +19,8 @@
             display: block;
             width: 60%;
             margin: auto;
-            transform: scale(1);       
+            transform: scale(1); 
+            animation: scaleOut 2s ease;      
         }
     
         p {
@@ -86,6 +87,14 @@
         transform: translate(-20%, 100%) !important;  
     }  
 }
+}
+@keyframes scaleOut {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 
