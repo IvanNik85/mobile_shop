@@ -1,5 +1,12 @@
 @import "../../index.scss";
 
+.navbar {
+    transition: .4s;
+}
+.nabar-hidden {
+    top: -65px;
+}
+
 .navbar-nav {
     .nav-link {
         color: #74cbff !important;
@@ -80,5 +87,8 @@ button.navbar-toggler:focus {
 @media (max-width: 768px) {
     .d-inline-block {
         left: 0; 
+    }  
+    .nabar-hidden {
+        top: 0;
     }
 }

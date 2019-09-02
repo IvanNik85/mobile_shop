@@ -9,7 +9,7 @@ export default class Product extends Component {
         const {id, title, img, price, inCart} = this.props.product;          
         return (
             <ProductConsumer>
-                {value => (
+                {value => (                   
                     <div className="col-9 col-md-6 col-lg-3 mx-auto product">
                         <div className="card" 
                         onClick={() => value.handleDetail(id)}>
@@ -19,7 +19,7 @@ export default class Product extends Component {
                             </Link>
                             <div className="cardFooter">
                                 <button 
-                                    className="cartBtn" 
+                                    className={inCart ? "inCart" : "cartBtn" }
                                     disabled={inCart ? true : false}
                                     onClick={() => value.addToCart(id)}
                                 >

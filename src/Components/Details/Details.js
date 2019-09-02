@@ -30,7 +30,7 @@ export default class Details extends Component {
                                     <h3>Model: {title}</h3>
                                     <h4>Price: {price}</h4>
                                    <p className="text-muted">{description}</p>
-                                   <Link to="/">
+                                   <Link to="/ProductList">
                                         <Button text="Back to products" classN="blue"/>
                                     </Link>
                                     <Link to="/Cart">

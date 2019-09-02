@@ -1,10 +1,12 @@
 @import "../../index.scss";
-
+#root {
+    background-color:#e9e8e8;
+}
 .product {
     padding: 5px;
 
     .card {  
-        border: 1px solid rgba(2, 90, 161, 0.5); 
+        border: 1px solid rgba(184, 185, 185, 0.5);
         box-sizing: border-box;            
     
         h1 {
@@ -32,6 +34,16 @@
         a {
             padding-bottom: 25px;
         }
+        .inCart {
+            position: absolute;
+            bottom: 65px;
+            right: 0;
+            background: transparent;
+            color: color(green);
+            border: none; 
+            font-size: 1.4em;
+            font-weight: 600;
+        }
         .cartBtn {
             // display: none;
             position: absolute;
@@ -43,6 +55,12 @@
             color: color(red);
             font-size: 1.4em;
             padding: 2px 8px 2px 6px;
+            .inCart {
+                position: absolute;
+                right: -90px;
+                bottom: -30px; 
+                color: color(green);
+            }
             &:hover {
                 color: color(green);
             }
@@ -62,10 +80,7 @@
             display: block;
             transform: translate(-20%, 100%);         
             transition: .7s;            
-        }   
-        &:hover span {
-            color: color(green);
-        }        
+        } 
         .cardFooter {           
             position: relative;
             height: 100px;
@@ -80,12 +95,15 @@
 @media (min-width: 420px) and (max-width: 992px) {
     .card {
         .cartBtn {
-            transform: translate(-1000%,100%) !important;       
+            transform: translate(-1000%, 100%) !important;       
         }    
     
     &:hover .cartBtn{       
         transform: translate(-20%, 100%) !important;  
     }  
+    &:hover span {
+        transform: translate(0.0)!important; ; 
+    }
 }
 }
 @keyframes scaleOut {
@@ -96,5 +114,6 @@
         transform: scale(1);
     }
 }
+
 
 
