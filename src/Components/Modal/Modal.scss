@@ -1,0 +1,39 @@
+@import "../Button/Button.scss";
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);  
+    .modalArea {
+        background: #fff;
+        border-radius: 10px;
+        opacity: 0;
+        height: 80%;        
+        animation: reveal .5s forwards;
+        .imageModal {
+            max-width: 80%;
+            height: auto;
+        }
+        h2 {
+            padding: 20px 0;   
+        }
+        h3 {
+            padding: 25px 0 5px 0;
+        }
+        p {
+            font-weight: bold;
+        }
+        .btn {
+            margin-top: 15px;        
+        }
+    }
+}
+@keyframes reveal {
+    from { 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }       
+} 

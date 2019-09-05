@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding-top: 65px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.product {
+  padding: 5px;
+}
+
+.product .card {
+  border: 1px solid rgba(184, 185, 185, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.product .card h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: .3em;
+}
+
+.product .card img {
+  display: block;
+  width: 60%;
+  margin: auto;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: scaleOut 2s ease;
+          animation: scaleOut 2s ease;
+}
+
+.product .card p {
+  display: block;
+  margin-top: 3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product .card a {
+  padding-bottom: 25px;
+}
+
+.product .card .inCart {
+  position: absolute;
+  bottom: 65px;
+  right: 0;
+  background: transparent;
+  color: #46c791;
+  border: none;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.product .card .cartBtn {
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  -webkit-transform: translate(-700%, 100%);
+          transform: translate(-700%, 100%);
+  background: transparent;
+  border: none;
+  color: #cc1515;
+  font-size: 1.4em;
+  padding: 2px 8px 2px 6px;
+}
+
+.product .card .cartBtn .inCart {
+  position: absolute;
+  right: -90px;
+  bottom: -30px;
+  color: #46c791;
+}
+
+.product .card .cartBtn:hover {
+  color: #46c791;
+}
+
+.product .card .cartBtn:focus {
+  outline: none;
+}
+
+.product .card:hover {
+  -webkit-box-shadow: 2px 2px 12px #000;
+          box-shadow: 2px 2px 12px #000;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.product .card:hover img {
+  -webkit-transform: scale(1.175);
+          transform: scale(1.175);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.product .card:hover .cartBtn {
+  display: block;
+  -webkit-transform: translate(-20%, 100%);
+          transform: translate(-20%, 100%);
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.product .card .cardFooter {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+.product .card .cardFooter p {
+  margin: 35px;
+  font-size: 1.2em;
+}
+
+@media (min-width: 420px) and (max-width: 992px) {
+  .card .cartBtn {
+    -webkit-transform: translate(-1000%, 100%) !important;
+            transform: translate(-1000%, 100%) !important;
+  }
+  .card:hover .cartBtn {
+    -webkit-transform: translate(-20%, 100%) !important;
+            transform: translate(-20%, 100%) !important;
+  }
+  .card:hover span {
+    -webkit-transform: translate(0) !important;
+            transform: translate(0) !important;
+  }
+}
+
+@-webkit-keyframes scaleOut {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=Product.css.map */

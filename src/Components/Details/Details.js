@@ -16,7 +16,7 @@ export default class Details extends Component {
                        price,
                        description,
                        inCart
-                   } = value.detailProduct;
+                   } = value.detailProduct;               
                    return (
                         <div className="container">
                             <div className="row">
@@ -32,14 +32,18 @@ export default class Details extends Component {
                                    <p className="text-muted">{description}</p>
                                    <Link to="/ProductList">
                                         <Button text="Back to products" classN="blue"/>
-                                    </Link>
-                                    <Link to="/Cart">
-                                        <Button 
-                                            text={inCart ? "in cart" : "Add to cart"}                                        
-                                            disab={inCart ? true : false}
-                                            classN="red"
-                                        />
-                                    </Link>
+                                    </Link>                                    
+                                    <button     
+                                        className="btn red"                          
+                                        disabled={inCart ? true : false}                                                                             
+                                        onClick = {() => {
+                                            value.addToCart(id);
+                                            value.openModal(id);
+                                            }
+                                        }
+                                       
+                                    >{inCart ? <span>In Cart</span> : "Add to cart"}
+                                    </button>                                  
                                 </div>
                             </div>
                         </div>

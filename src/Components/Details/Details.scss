@@ -10,6 +10,9 @@ h1 {
         font-size: 1.2em;
         text-align: justify;
     }   
+    button ~ span {
+        background-color: color(red);
+    }
     // button.cart1 {
     //     display: inline-block !important;
     //     border: 2px solid $btnColor1;

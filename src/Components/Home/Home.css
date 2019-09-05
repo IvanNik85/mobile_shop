@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding-top: 65px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.Home {
+  position: relative;
+  min-height: calc(100vh - 65px);
+  background: url("../../images/mainImage3.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.Home h1 {
+  color: #fff;
+  font-size: 60px;
+  margin: auto;
+  opacity: 0;
+  -webkit-animation: delayHeader 1.5s ease 1.4s forwards;
+          animation: delayHeader 1.5s ease 1.4s forwards;
+}
+
+@media (min-width: 768px) {
+  .Home h1 {
+    display: inline-block;
+    -webkit-transform: rotate(-35deg) translateY(-50%);
+            transform: rotate(-35deg) translateY(-50%);
+    position: absolute;
+    left: 150px;
+    top: 30%;
+  }
+}
+
+.Home .mainButtons {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  right: 5%;
+  height: 300px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: show 2s ease;
+          animation: show 2s ease;
+}
+
+.Home .mainButtons .pulse {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border: 2px solid #ec164c;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.Home .mainButtons .pulse a {
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.Home .mainButtons .pulse a .backPulse {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  opacity: 0.2;
+  -webkit-animation: pulse 1.5s 1.7s infinite alternate;
+          animation: pulse 1.5s 1.7s infinite alternate;
+}
+
+.Home .mainButtons .pulse:hover {
+  background-color: #ec164c;
+}
+
+@media (max-width: 768px) {
+  .Home .mainButtons {
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.4);
+            transform: scale(1.2, 1.4);
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.4);
+            transform: scale(1.2, 1.4);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes show {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes delayHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes delayHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

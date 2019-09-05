@@ -20,8 +20,12 @@ export default class Product extends Component {
                             <div className="cardFooter">
                                 <button 
                                     className={inCart ? "inCart" : "cartBtn" }
-                                    disabled={inCart ? true : false}
-                                    onClick={() => value.addToCart(id)}
+                                    disabled={inCart ? true : false}                                    
+                                    onClick={() => {
+                                        value.addToCart(id);
+                                        value.openModal(id);
+                                        }
+                                    }                                                                     
                                 >
                                     {inCart?<span>In Cart</span>:<i className="fas fa-cart-plus"></i>}                        
                                 </button>

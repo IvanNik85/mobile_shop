@@ -7,19 +7,21 @@ class ProductProvider extends Component {
     state = {
         products: [],
         detailProduct: detailProduct,
-        cart: []
+        cart: [],
+        modalOpen: false,
+        modalProduct: detailProduct
     }
-    setItem = (id) => {
+    getItem = (id) => {
         const product = this.state.products.find(item => item.id == id);
         return product;
     }
     handleDetail = (id) => {
-        const product = this.setItem(id);
+        const product = this.getItem(id);
         this.setState({detailProduct: product})
     }
     addToCart = (id) => {
         let tempProducts = [...this.state.products];
-        const index = tempProducts.indexOf(this.setItem(id));
+        const index = tempProducts.indexOf(this.getItem(id));
         const product = tempProducts[index];
         product.inCart = true;
         product.count = 1;
@@ -31,10 +33,22 @@ class ProductProvider extends Component {
             )        
         }
     
-        
-    
-        
-    
+    openModal = (id) => {
+        const product = this.getItem(id);       
+        this.setState(() => {
+            return {
+                modalOpen: true,
+                modalProduct: product                
+            }
+        })
+    }    
+
+    closeModal = () => {
+        this.setState(() => {
+            return {modalOpen: false}
+        })
+    }
+
     setProducts = () => {
         let copyProducts = [];
         storeProducts.forEach(item => {
@@ -55,7 +69,9 @@ class ProductProvider extends Component {
             <Context.Provider value={{
                 ...this.state,
                 handleDetail: this.handleDetail,
-                addToCart: this.addToCart
+                addToCart: this.addToCart,
+                openModal: this.openModal,
+                closeModal: this.closeModal
                 }}>
                 {this.props.children}
             </Context.Provider>

@@ -10,6 +10,7 @@ import Default from './Components/Default/Default'
 import Contact from './Components/Contact/Contact'
 import Cart from './Components/Cart/Cart'
 import Home from './Components/Home/Home'
+import Modal from "./Components/Modal/Modal"
 import {ProductProvider} from './Context'
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
                    <Route path="/Cart" component={Cart} />                   
                    <Route component={Default} />
                </Switch>
-           </Router>          
+               <Modal />
+           </Router> 
        </ProductProvider>
     )
 }

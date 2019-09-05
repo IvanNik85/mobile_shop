@@ -1,0 +1,12 @@
+.errorPage {
+  position: relative;
+  min-height: calc(100vh - 65px);
+}
+
+.errorPage img {
+  display: block;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+/*# sourceMappingURL=Default.css.map */
