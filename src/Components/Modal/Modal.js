@@ -18,7 +18,7 @@ export default class Modal extends Component {
                         return (
                             <div className="container-fluid modal">
                                 <div className="row">
-                                    <div className="col9 mx-auto md-6 lg-4 text-center px-5 py-3 modalArea">
+                                    <div className="col-10 mx-auto text-center px-5 py-3 modalArea">
                                         <h2>Added to cart</h2>
                                         <img className="imageModal" src={img} alt={title}/>
                                         <h3>{title}</h3>

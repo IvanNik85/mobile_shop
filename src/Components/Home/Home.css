@@ -26,6 +26,8 @@ html {
   font-size: 60px;
   margin: auto;
   opacity: 0;
+  -webkit-transition: all .4s;
+  transition: all .4s;
   -webkit-animation: delayHeader 1.5s ease 1.4s forwards;
           animation: delayHeader 1.5s ease 1.4s forwards;
 }

@@ -9,7 +9,10 @@ class ProductProvider extends Component {
         detailProduct: detailProduct,
         cart: [],
         modalOpen: false,
-        modalProduct: detailProduct
+        modalProduct: detailProduct,
+        // cartSubtotal: 0,
+        // cardTax: 0,
+        // cardTotal: 0
     }
     getItem = (id) => {
         const product = this.state.products.find(item => item.id == id);
@@ -49,6 +52,22 @@ class ProductProvider extends Component {
         })
     }
 
+    increment = (id) => {
+        console.log("icremented product")
+    }
+
+    decrement = (id) => {
+        console.log("decremented product")
+    }
+
+    removeItem = (id) => {
+        console.log("removed product")
+    }
+
+    clearCart = (id) => {
+        console.log("cleared Cart")
+    }
+
     setProducts = () => {
         let copyProducts = [];
         storeProducts.forEach(item => {
@@ -71,8 +90,12 @@ class ProductProvider extends Component {
                 handleDetail: this.handleDetail,
                 addToCart: this.addToCart,
                 openModal: this.openModal,
-                closeModal: this.closeModal
-                }}>
+                closeModal: this.closeModal,
+                increment: this.increment,
+                decrement: this.decrement,
+                removeItem: this.removeItem,
+                clearCart: this.clearCart
+            }}>
                 {this.props.children}
             </Context.Provider>
         )

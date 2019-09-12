@@ -1,0 +1,16 @@
+.cart {
+    text-align: center;
+    h1 {
+        padding: 30px;
+    }
+    .cartElement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        border: 2px solid orangered;
+        p {
+            margin: 0; 
+        }
+    }
+}
