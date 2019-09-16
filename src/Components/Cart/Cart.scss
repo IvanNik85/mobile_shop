@@ -7,10 +7,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 300px;
-        border: 2px solid orangered;
-        p {
-            margin: 0; 
+        max-height: 300px;        
+        h3 {
+            color:rgba(237, 22, 77, 0.8);
         }
+
     }
 }

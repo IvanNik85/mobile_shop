@@ -16,11 +16,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 300px;
-  border: 2px solid orangered;
+  max-height: 300px;
 }
 
-.cart .cartElement p {
-  margin: 0;
+.cart .cartElement h3 {
+  color: rgba(237, 22, 77, 0.8);
 }
 /*# sourceMappingURL=Cart.css.map */

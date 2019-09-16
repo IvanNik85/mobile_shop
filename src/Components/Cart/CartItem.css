@@ -1,0 +1,52 @@
+hr {
+  display: block;
+  width: 100%;
+  border-top: 2px solid #a3a2a2;
+}
+
+.btnDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.incBtn, .incBtn1 {
+  border: 2px solid #ababab;
+  padding: 8px 17px;
+  margin-right: 2px;
+  background: transparent;
+  font-size: 20px;
+}
+
+.incBtn:hover {
+  border: 2px solid #5e5d5d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:not(:disabled) {
+  cursor: auto;
+}
+
+.fa-trash {
+  padding: 12px;
+  cursor: pointer;
+  color: #74aece;
+  font-size: 22px;
+}
+
+.fa-trash:hover {
+  color: #2194d1;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=CartItem.css.map */

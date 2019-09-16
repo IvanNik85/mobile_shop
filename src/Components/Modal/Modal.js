@@ -27,7 +27,7 @@ export default class Modal extends Component {
                                             <button className="btn blue" onClick={() => value.closeModal()}>Back to products</button>
                                         </Link>                                        
                                         <Link to="./Cart">
-                                            <button className="btn red" onClick={() => value.closeModal()}>To cart</button>
+                                            <button className="btn red" onClick={() => value.closeModal()}>Go to cart</button>
                                         </Link>                                       
                                     </div>
                                 </div>
