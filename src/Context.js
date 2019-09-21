@@ -7,12 +7,23 @@ class ProductProvider extends Component {
     state = {
         products: [],
         detailProduct: detailProduct,
-        cart: storeProducts, //[],
+        cart: [], //storeProducts,
         modalOpen: false,
         modalProduct: detailProduct,
-        // cartSubtotal: 0,
-        // cardTax: 0,
-        // cardTotal: 0
+        cartSubtotal: 0,
+        cartTax: 0,
+        cartTotal: 0
+    }
+    //set copy of products so storeProducts stay intacted
+    setProducts = () => {
+        let copyProducts = [];
+        storeProducts.forEach(item => {
+            const oneProduct = {...item};
+            copyProducts = [...copyProducts, oneProduct];
+        })
+        this.setState(() => {
+            return {products: copyProducts} 
+        })
     }
     getItem = (id) => {
         const product = this.state.products.find(item => item.id == id);
@@ -32,7 +43,9 @@ class ProductProvider extends Component {
         this.setState(() => {
             return {products: tempProducts,           
                     cart: [...this.state.cart, product]}
-        }, () => {console.log(this.state)}
+        }, () => {
+            this.addTotal();
+        }
             )        
         }
     
@@ -65,20 +78,33 @@ class ProductProvider extends Component {
     }
 
     clearCart = (id) => {
-        console.log("cleared Cart")
+        this.setState(() => {
+            return {cart: []};
+        }, () => {            
+            this.setProducts()
+            this.addTotal();          
+        })
     }
 
-    setProducts = () => {
-        let copyProducts = [];
-        storeProducts.forEach(item => {
-            const oneProduct = {...item};
-            copyProducts = [...copyProducts, oneProduct];
-        })
+    addTotal = () => {
+        let subTotal = 0;
+        this.state.cart.map(item => (subTotal += parseFloat(item.total)));
+        let tax = subTotal * 0.2;
+        let taxRound = parseFloat(tax.toFixed(2));
+        let total = (subTotal + taxRound).toFixed(2);
         this.setState(() => {
-            return {products: copyProducts} 
-        })
+            return {
+                cartSubtotal: subTotal,
+                cartTax: taxRound,
+                cartTotal: total
+            }           
+        }, () => {
+            console.log(subTotal)
+            console.log(taxRound)
+            console.log(total)
+        });
     }
-    
+
     componentDidMount() {
         this.setProducts();
     }

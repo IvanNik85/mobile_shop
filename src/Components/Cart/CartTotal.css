@@ -1,0 +1,43 @@
+.btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #fff;
+  margin: 0 15px 35px 0;
+}
+
+.btn:focus {
+  outline: none !important;
+}
+
+.btn:hover {
+  color: #fff !important;
+}
+
+.blue {
+  border: 2px solid #007bc6;
+  color: #007bc6;
+}
+
+.blue:hover {
+  background-color: #007bc6;
+}
+
+.red {
+  border: 2px solid #ec164c;
+  color: #ec164c;
+}
+
+.red:hover {
+  background-color: #ec164c;
+}
+
+.orange {
+  border: 2px solid #f48021;
+  color: #f48021;
+}
+
+.orange:hover {
+  background-color: #f48021;
+}
+/*# sourceMappingURL=CartTotal.css.map */

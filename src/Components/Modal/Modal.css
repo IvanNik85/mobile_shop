@@ -82,6 +82,7 @@
 
 .modal .modalArea .btn {
   margin-top: 15px;
+  cursor: pointer;
 }
 
 @-webkit-keyframes reveal {

@@ -16,9 +16,15 @@ hr {
           align-items: center;
 }
 
+.sText {
+  font-size: 18px;
+  color: #5e5d5d;
+}
+
 .incBtn, .incBtn1 {
   border: 2px solid #ababab;
-  padding: 8px 17px;
+  width: 50px;
+  height: 50px;
   margin-right: 2px;
   background: transparent;
   font-size: 20px;
@@ -32,6 +38,10 @@ hr {
 
 button:not(:disabled) {
   cursor: auto;
+}
+
+button:focus {
+  outline: none;
 }
 
 .fa-trash {
@@ -48,5 +58,15 @@ button:not(:disabled) {
 .total {
   font-size: 20px;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.total p {
+  padding-left: 10px;
 }
 /*# sourceMappingURL=CartItem.css.map */

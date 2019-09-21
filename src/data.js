@@ -23,7 +23,7 @@ export const storeProducts = [
              Turbo-charged by the revolutionary graphics processing acceleration technology, the GPU Turbo 2.0 dramatically improves graphics progressing efficiency, delivering a smooth, full-frame gaming experience*7`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0
     }, 
     {
         id: 2,
@@ -36,7 +36,7 @@ export const storeProducts = [
                 The P30 lite runs Android 9.0 and is powered by a 3340mAh non removable battery. It measures  152.9 x 72.7 x 7.4 mm and weighs 159 grams.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0
     }, 
     {
         id: 3,
@@ -58,13 +58,13 @@ export const storeProducts = [
             The high-performing and AI-powered Qualcomm™ Snapdragon® 710 processor delivers the speed you need, while the new Adaptive Battery feature on Android 9 Pie helps provide 2-day1 battery life.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0 
     }, 
     {
         id: 4,
         title: "Apple iPhone XS 512GB Dual sim",
         img: "images/IPhone-XS.jpg",
-        price: "1,291.99€",
+        price: "1291.99€",
         description: 
             `Super Retina. In big and bigger. The custom OLED displays on iPhone XS deliver the most accurate color in the industry, HDR, and true blacks. Exceptional materials. The most durable glass ever in a smartphone. A beautiful new gold finish, achieved with an atomic-level process. Precision-machined, surgical-grade stainless steel bands. And a new level of water and dust resistance. Advanced Face ID. Security is simple when your face is your password. You can unlock your iPhone, log in to apps, and pay for things with a glance. It’s the most secure facial authentication ever in a smartphone. And now it’s even faster. Intelligent A12 Bionic. This is the smartest, most powerful chip in a smartphone, with our next-generation Neural Engine. For amazing augmented reality experiences. Incredible portraits with Depth Control. And speed and fluidity in everything you do. Breakthrough dual-camera system. The world’s most popular camera is defining a new era of photography. Where an innovative sensor works with the ISP and Neural Engine to help you create photos like never before.`,
         inCart: false,
@@ -80,9 +80,9 @@ export const storeProducts = [
             `Samsung Galaxy A50 comes with a 6.4-inch touchscreen display with a resolution of 1080 pixels by  2340 pixels.Samsung Galaxy A50 is powered by Octa-core processor and it comes with 6GB of RAM. The phone packs 128GB of internal storage that can be expanded up to 512GB via a microSD card. As far as the cameras are concerned, the A50 packs a 25+8+5 megapixel primary camera on the rear and a 25-megapixel front shooter for selfies.
  
             Samsung Galaxy A50 runs Android 9.0 and is powered by a 4000mAh non removable battery. It measures 158.5 x 74.7 x 7.7.`,
-        inCart: true,
+        inCart: false,
         count: 0,
-        total: 0, 
+        total: 0
     }, 
     {
         id: 6,
@@ -117,7 +117,7 @@ export const storeProducts = [
             Get an incredible listening experience with Hi-Fi Quad DAC playback, allowing you to hear crisp, clear sound that is closer to the source.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0 
     }, 
     {
         id: 7,
@@ -130,7 +130,7 @@ export const storeProducts = [
             The Honor View 20 runs Android 9.0 and is powered by a 4000mAh non removable battery. It measures 156.9 x 75.4 x 8.1 mm and weighs 180 grams.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0 
     }, 
     {
         id: 8,
@@ -155,7 +155,7 @@ export const storeProducts = [
             The secret to amazing photography? Three essential lenses: wide angle, telephoto, and ultra wide-angle. Mi 9 has a lens with a view wider than typical lenses, and the camera is capable of correcting for distortion. It even supports macro photography, so there's no limits to your creativity.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0 
     }, 
     {
         id: 9,
@@ -188,7 +188,7 @@ export const storeProducts = [
             No need to ration your phone usage. Intelligent Performance Enhancer recognizes your mobile habits, optimizing the way you interact with your phone — even anticipating your needs by preloading your frequently used apps so they launch instantly.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0
     }, 
     {
         id: 10,
@@ -211,7 +211,7 @@ export const storeProducts = [
             The Kirin 980 is the world's first 7nm mobile process chipset with stronger performance and lower power consumption. This innovative chipset plus up to 6GB of RAM and 128GB of memory storage,4 reveal a performance powerhouse in the HUAWEI P30.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0 
     }, 
     {
         id: 11,
@@ -235,7 +235,7 @@ export const storeProducts = [
             Give your music the quality it deserves. Take every track closer to the original recording with High-Resolution Audio3 and DSEE HX™, while LDAC makes everything sound great even if you’re listening wirelessly.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0 
     }, 
     {
         id: 12,
@@ -262,7 +262,7 @@ export const storeProducts = [
             Enjoy crisp and phenomenal sound by yourself or with friends. LG's technology and collaboration with Meridian to deliver even greater bass, volume, fidelity, and spacial sound.`,
         inCart: false,
         count: 0,
-        total: 0, 
+        total: 0 
     }, 
 ]
 
@@ -275,5 +275,5 @@ export const detailProduct = {
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sunt repellat dolor minima quis sit deleniti magni? Vitae, corporis numquam facilis iusto officia, necessitatibus architecto minima modi ad et nemo praesentium quis distinctio. Nam hic culpa alias quo sed temporibus recusandae architecto! Saepe optio ex, vero deleniti fuga accusamus natus, veniam voluptatum nam, sunt consequatur atque rerum molestias illo nesciunt reiciendis facilis in!",
     inCart: false,
     count: 0,
-    total: 0, 
+    total: 0 
 }

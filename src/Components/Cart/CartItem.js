@@ -15,11 +15,11 @@ export default function CartItem({item,value}) {
                 />
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <span className="d-lg-none">product :</span>
+                <span className="d-lg-none sText">Product:</span>
                 <h3>{title}</h3>              
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <span className="d-lg-none">price :</span>
+                <span className="d-lg-none sText">Price:</span>
                 <h3>{price}</h3>              
             </div>
             <div className="col-10 mx-auto col-lg-2">
@@ -37,7 +37,7 @@ export default function CartItem({item,value}) {
                 </div>              
             </div>
             <div className="col-10 mx-auto col-lg-2 total">
-                <span className="d-block d-lg-none">total : </span>   
+                <span className="d-block d-lg-none">total: </span>   
                 <p>{total}</p>                    
             </div>      
             <hr/>     

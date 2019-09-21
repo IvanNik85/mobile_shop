@@ -1,9 +1,9 @@
 import React from 'react'
-import "./CartElement.scss"
+import "./CartHeader.scss"
 
-export default function CartElements() {
+export default function CartHeader() {
     return (
-        <div className="container-fluid cart">
+        <div className="container-fluid cartHeader">
             <h1>Your Cart</h1>
             <div className="row">
                 <div className="col-10 mx-auto col-md-4 col-lg-2 d-none d-lg-block cartElement">

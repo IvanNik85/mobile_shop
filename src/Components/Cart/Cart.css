@@ -1,12 +1,12 @@
-.cart {
+.cartHeader {
   text-align: center;
 }
 
-.cart h1 {
+.cartHeader h1 {
   padding: 30px;
 }
 
-.cart .cartElement {
+.cartHeader .cartElement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,7 +19,7 @@
   max-height: 300px;
 }
 
-.cart .cartElement h3 {
-  color: rgba(237, 22, 77, 0.8);
+.cartHeader .cartElement h3 {
+  color: #909090;
 }
 /*# sourceMappingURL=Cart.css.map */
