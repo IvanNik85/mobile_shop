@@ -20,14 +20,14 @@ export default function CartItem({item,value}) {
             </div>
             <div className="col-10 mx-auto col-lg-2">
                 <span className="d-lg-none sText">Price:</span>
-                <h3>{price}</h3>              
+                <h3>{price}€</h3>              
             </div>
             <div className="col-10 mx-auto col-lg-2">
                 <div className="d-flex justify-content-center">
                     <div className="btnDiv py-2">
-                        <button className="incBtn" onClick={() => increment(id)}>-</button>
+                        <button className="incBtn" onClick={() => decrement(id)}>-</button>
                         <button className="incBtn1">{count}</button>  
-                        <button className="incBtn" onClick={() => decrement(id)}>+</button>      
+                        <button className="incBtn" onClick={() => increment(id)}>+</button>      
                     </div>    
                 </div>             
             </div>
@@ -38,7 +38,7 @@ export default function CartItem({item,value}) {
             </div>
             <div className="col-10 mx-auto col-lg-2 total">
                 <span className="d-block d-lg-none">total: </span>   
-                <p>{total}</p>                    
+                <p>{total.toFixed(2)}€</p>                    
             </div>      
             <hr/>     
         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import "../Cart/Cart"
 
 export default function EmptyCard() {
     return (

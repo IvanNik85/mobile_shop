@@ -22,7 +22,7 @@ export default class Modal extends Component {
                                         <h2>Added to cart</h2>
                                         <img className="imageModal" src={img} alt={title}/>
                                         <h3>{title}</h3>
-                                        <p>{price}</p>  
+                                        <p>{price}€</p>  
                                         <Link to="./ProductList">
                                             <button className="btn blue" onClick={() => value.closeModal()}>Back to products</button>
                                         </Link>                                        

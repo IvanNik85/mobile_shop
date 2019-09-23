@@ -29,7 +29,7 @@ export default class Product extends Component {
                                 >
                                     {inCart?<span>In Cart</span>:<i className="fas fa-cart-plus"></i>}                        
                                 </button>
-                                <p>{price}</p>
+                                <p>{price}€</p>
                             </div>
                         </div>                
                     </div>
@@ -42,7 +42,7 @@ Product.propTypes = {
     product: PropTypes.shape({
         id: PropTypes.number,
         img: PropTypes.string,
-        price: PropTypes.string,
+        price: PropTypes.number,
         inCart: PropTypes.bool
     }).isRequired
 }

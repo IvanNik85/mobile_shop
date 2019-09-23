@@ -65,16 +65,67 @@ class ProductProvider extends Component {
         })
     }
 
+    // incMethod = () {
+
+    // }
+
     increment = (id) => {
-        console.log("icremented product")
+        // this.incMethod();
+        let tempCart = [...this.state.cart];
+        let selected = tempCart.find(item => item.id == id);
+
+        selected.count = selected.count + 1;
+        selected.total = selected.count * selected.price;
+
+        this.setState( () => {
+            return {
+                cart: [...tempCart]
+            }
+        }, () => {
+            this.addTotal();
+        })
     }
 
     decrement = (id) => {
-        console.log("decremented product")
+        let tempCart = [...this.state.cart];
+        let selected = tempCart.find(item => item.id == id);        
+        selected.count = selected.count - 1;
+
+        if(selected.count === 0) {
+            this.removeItem(id);           
+        } else {            
+            selected.total = selected.count * selected.price;
+            this.setState( () => {
+                return {
+                    cart: [...tempCart]
+                }
+            }, () => {
+                this.addTotal();
+            })
+        }      
     }
 
     removeItem = (id) => {
-        console.log("removed product")
+        let tempProducts = [...this.state.products];
+        let tempCart = [...this.state.cart];
+
+        tempCart = tempCart.filter(item => item.id != id);
+
+        let index = tempProducts.indexOf(this.getItem(id));
+        let product = tempProducts[index];
+        product.inCart = false;
+        product.count = 0;
+        product.total = 0;
+
+        this.setState(() => {
+            return {
+                cart:tempCart,
+                products: tempProducts
+            }
+        }, () => {
+            this.addTotal();
+        });
+
     }
 
     clearCart = (id) => {
@@ -88,13 +139,13 @@ class ProductProvider extends Component {
 
     addTotal = () => {
         let subTotal = 0;
-        this.state.cart.map(item => (subTotal += parseFloat(item.total)));
+        this.state.cart.map(item => subTotal += item.total);
         let tax = subTotal * 0.2;
         let taxRound = parseFloat(tax.toFixed(2));
         let total = (subTotal + taxRound).toFixed(2);
         this.setState(() => {
             return {
-                cartSubtotal: subTotal,
+                cartSubtotal: subTotal.toFixed(2),
                 cartTax: taxRound,
                 cartTotal: total
             }           
