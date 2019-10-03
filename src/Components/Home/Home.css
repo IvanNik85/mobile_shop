@@ -16,7 +16,8 @@ html {
 
 .Home {
   position: relative;
-  min-height: calc(100vh - 65px);
+  min-height: 600px;
+  height: 100vh;
   background: url("../../images/mainImage3.jpg") no-repeat center;
   background-size: cover;
 }
@@ -64,8 +65,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: show 2s ease;
-          animation: show 2s ease;
+  visibility: hidden;
 }
 
 .Home .mainButtons .pulse {
@@ -88,6 +88,14 @@ html {
   text-decoration: none;
   font-size: 20px;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .Home .mainButtons .pulse a {
+    width: 170px;
+    height: 50px;
+    line-height: 45px;
+  }
 }
 
 .Home .mainButtons .pulse a .backPulse {
@@ -144,19 +152,21 @@ html {
 
 @-webkit-keyframes show {
   0% {
-    top: -10%;
+    top: 10%;
   }
   100% {
     top: 50%;
+    visibility: visible;
   }
 }
 
 @keyframes show {
   0% {
-    top: -10%;
+    top: 10%;
   }
   100% {
     top: 50%;
+    visibility: visible;
   }
 }
 

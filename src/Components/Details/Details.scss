@@ -39,12 +39,15 @@ h1 {
         margin: 35px 35px 35px 0 !important; 
         font-size: 1.2em;
         text-align: justify;
+        @media (max-width: 767px) {
+            margin: 35px 0 !important;
+        }
     }   
     button ~ span {
         background-color: color(red);
     }
     @media (max-width: 767px) {
-        margin-top: 120px;
+        margin-top: 120px;       
     }
     // button.cart1 {
     //     display: inline-block !important;

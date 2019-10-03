@@ -11,6 +11,7 @@ import Contact from './Components/Contact/Contact'
 import Cart from './Components/Cart/Cart'
 import Home from './Components/Home/Home'
 import Modal from "./Components/Modal/Modal"
+import MainClass from "./Components/MainClass/MainClass"
 import {ProductProvider} from './Context'
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
                    <Route component={Default} />
                </Switch>
                <Modal />
-           </Router> 
+           </Router>            
        </ProductProvider>
     )
 }

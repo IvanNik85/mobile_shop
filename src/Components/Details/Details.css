@@ -101,6 +101,12 @@ h1 {
   text-align: justify;
 }
 
+@media (max-width: 767px) {
+  .details p {
+    margin: 35px 0 !important;
+  }
+}
+
 .details button ~ span {
   background-color: #cc1515;
 }

@@ -46,6 +46,7 @@ class NavbarMain extends Component {
                         <Nav.Link href="./ProductList">Products</Nav.Link>                   
                         <Nav.Link href="./Cart"><i className="fas fa-cart-plus mx-2"></i>Cart</Nav.Link>
                         <Nav.Link href="./Contact">Contact</Nav.Link>
+                        <Nav.Link href="./#Home">Main</Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

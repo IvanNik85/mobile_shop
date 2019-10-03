@@ -1,0 +1,22 @@
+#Main {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;   
+   
+    h1 {
+        font-size: 60px;
+        color: orangered;
+    }
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    span {
+        font-size: 25px;
+    }
+    img {       
+        min-height: 100vh;
+        object-fit: cover;         
+    }
+    
+}
