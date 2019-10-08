@@ -1,26 +1,269 @@
+body {
+  margin: 0;
+  padding-top: 65px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 #Main {
   min-height: 100vh;
   position: relative;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#Main h1 {
-  font-size: 60px;
+#Main .carousel-indicators {
+  display: none;
+}
+
+#Main .mainText {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-animation: fullCircle .7s forwards;
+          animation: fullCircle .7s forwards;
+}
+
+#Main .mainText h1 {
+  font-size: 80px;
+  letter-spacing: 0px;
   color: orangered;
+  -webkit-animation: animate 1.5s forwards;
+          animation: animate 1.5s forwards;
 }
 
-#Main h2 {
+@media (max-width: 500px) {
+  #Main .mainText h1 {
+    font-size: 65px;
+  }
+}
+
+#Main .mainText h2 {
   font-size: 40px;
   font-weight: bold;
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
+  -webkit-animation: slideLeft 1s ease 1.3s forwards;
+          animation: slideLeft 1s ease 1.3s forwards;
+  color: #2196f3;
 }
 
-#Main span {
+@media (max-width: 500px) {
+  #Main .mainText h2 {
+    font-size: 27px;
+  }
+}
+
+#Main .mainText h2 span {
+  color: #ec164c;
+  font-size: 40px;
+}
+
+@media (max-width: 500px) {
+  #Main .mainText h2 span {
+    font-size: 33px;
+  }
+}
+
+#Main .mainText span {
   font-size: 25px;
+  padding-bottom: 5px;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  visibility: hidden;
+  -webkit-animation: slideDown .8s ease 1s forwards;
+          animation: slideDown .8s ease 1s forwards;
+}
+
+#Main .mainText:active {
+  -webkit-animation: disapearCircle 1s forwards;
+          animation: disapearCircle 1s forwards;
+}
+
+@media (max-width: 500px) {
+  #Main .mainText {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 #Main img {
   min-height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 8px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 8px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    visibility: hidden;
+  }
+  80% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    visibility: visible;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    visibility: hidden;
+  }
+  80% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes fullCircle {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 500px;
+    height: 500px;
+  }
+  100% {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@keyframes fullCircle {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 500px;
+    height: 500px;
+  }
+  100% {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@-webkit-keyframes disapearCircle {
+  0% {
+    width: 420px;
+    height: 420px;
+  }
+  50% {
+    width: 2420px;
+    height: 2420px;
+    opacity: 0;
+  }
+  100% {
+    width: 400%;
+    height: 400%;
+    opacity: 0;
+  }
+}
+
+@keyframes disapearCircle {
+  0% {
+    width: 420px;
+    height: 420px;
+  }
+  50% {
+    width: 2420px;
+    height: 2420px;
+    opacity: 0;
+  }
+  100% {
+    width: 400%;
+    height: 400%;
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=MainClass.css.map */

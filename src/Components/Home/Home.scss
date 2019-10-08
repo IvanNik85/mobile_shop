@@ -6,38 +6,11 @@
     background: url("../../images/mainImage3.jpg") no-repeat center;
     background-size: cover;
 
-    h1 {       
-        // font-family: 'Merriweather', serif;
-        // font-weight: bold;
-        color: #fff;
-        font-size: 60px;    
-        margin: auto; 
-        opacity: 0;   
-        transition: all .4s;
-        animation: delayHeader 1.5s ease 1.4s forwards; 
-        
-        @media (min-width: 768px) {
-            display: inline-block;   
-            transform: rotate(-35deg) translateY(-50%);
-            position: absolute;
-            left: 150px;
-            top: 30%;  
-        }
-    }
-
-// .homeBtn {      
-//     position: absolute;
-//     transform: translate(0, -50%);
-//     top: 50%;
-//     right: 10%;
-//     margin: 0;  
-//     background: rgba(0,0,0,.3);
-// }
     .mainButtons {
         position: absolute;
-        transform: translateY(-50%);
-        top: 50%;
-        right: 5%;
+        transform: translate(-50%, -50%);
+        // top: 50%;
+        right: 0;
         height: 300px;
         width: 300px;
         display: flex;
@@ -52,6 +25,7 @@
             position: relative;
             text-align: center;       
             border: 3px solid color(basicRed);
+            background-color: rgba(0, 0, 0, 0.2);
             border-radius: 5px; 
             margin-bottom: 25px;  
             transition: .2s;     
@@ -63,7 +37,7 @@
                 line-height: 60px;
                 text-decoration: none;
                 font-size: 20px;
-                color: #fff; 
+                color: #fff;                 
                 @media (max-width: 768px) {
                     width: 170px;
                     height: 50px;
@@ -87,8 +61,7 @@
             }  
         }
         @media (max-width: 768px) {
-            position: absolute;
-            transform: translateX(-50%);
+            position: absolute;            
             left: 50%;                 
             // top: 40%;
         }
@@ -111,13 +84,5 @@
             top: 50%;
             visibility: visible;
         }
-    }
-    @keyframes delayHeader {
-        from { 
-            opacity: 0; 
-        }
-        to { 
-            opacity: 1; 
-        }       
-    }
+    } 
 }

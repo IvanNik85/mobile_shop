@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./Cart.scss"
 import CartHeader from "./CartHeader"
-import EmptyCard from './EmptyCard'
+import EmptyCart from './EmptyCart'
 import { ProductConsumer } from "../../Context"
 import CartList from './CartList'
 import CartTotal from './CartTotal'
@@ -21,7 +21,7 @@ export default class Cart extends Component {
                             </div>
                         )
                     }
-                    return <EmptyCard />
+                    return <EmptyCart />
                 }}         
             </ProductConsumer>
             )

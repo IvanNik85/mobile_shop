@@ -41,6 +41,7 @@ h1 {
         text-align: justify;
         @media (max-width: 767px) {
             margin: 35px 0 !important;
+            font-size: 1.1em;
         }
     }   
     button ~ span {

@@ -22,34 +22,11 @@ html {
   background-size: cover;
 }
 
-.Home h1 {
-  color: #fff;
-  font-size: 60px;
-  margin: auto;
-  opacity: 0;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-  -webkit-animation: delayHeader 1.5s ease 1.4s forwards;
-          animation: delayHeader 1.5s ease 1.4s forwards;
-}
-
-@media (min-width: 768px) {
-  .Home h1 {
-    display: inline-block;
-    -webkit-transform: rotate(-35deg) translateY(-50%);
-            transform: rotate(-35deg) translateY(-50%);
-    position: absolute;
-    left: 150px;
-    top: 30%;
-  }
-}
-
 .Home .mainButtons {
   position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  top: 50%;
-  right: 5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  right: 0;
   height: 300px;
   width: 300px;
   display: -webkit-box;
@@ -73,6 +50,7 @@ html {
   position: relative;
   text-align: center;
   border: 3px solid #ec164c;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   margin-bottom: 25px;
   -webkit-transition: .2s;
@@ -120,8 +98,6 @@ html {
 @media (max-width: 768px) {
   .Home .mainButtons {
     position: absolute;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
     left: 50%;
   }
 }

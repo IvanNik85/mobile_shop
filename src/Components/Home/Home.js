@@ -15,7 +15,7 @@ export default class Home extends React.Component {
     } 
     
     handleScroll = () => {
-        if(window.pageYOffset > 900) { 
+        if(window.pageYOffset > window.innerHeight) { 
             this.setState({visible: true });  
         } 
     }
@@ -25,7 +25,7 @@ export default class Home extends React.Component {
             <div>
                 <MainClass />  
                 <div className="container-fluid Home" id="Home">                            
-                    <h1>Welcome to<br></br>ICA MobileShop</h1> 
+                    {/* <h1>Welcome to<br></br>ICA MobileShop</h1>  */}
                     <div className="row">
                         {/* <img src={mainImage} className="img-fluid mainImg" alt="mainImage"/> */}
                         <div className="mainButtons" style={this.state.visible ? styleIt : null}>
