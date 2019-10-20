@@ -267,4 +267,8 @@ html {
     opacity: 0;
   }
 }
+
+.none {
+  display: none;
+}
 /*# sourceMappingURL=MainClass.css.map */

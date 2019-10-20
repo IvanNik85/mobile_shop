@@ -5,22 +5,31 @@ import images from "../../images/mainImg1.jpg"
 import images1 from "../../images/mainImg2.jpeg"
 import images2 from "../../images/mainImg3.jpg"
 
-export default class MainClass extends React.Component {
+export default class MainClass extends React.Component {    
     state = {
-        anim: false
+        anim: false,
+        isLoading: true        
     }
-    render() {
+
+    handleImageLoaded() {
+        this.setState({ isLoading: false});              
+    }
+
+    render() {        
         let an = {animation: "disapearCircle 3s forwards"}
         return (
             <div id="Main">  
-               <div className="mainText" onClick = {() => this.setState({anim: true})} style = {this.state.anim ? an : null} >
+               <div className={this.state.isLoading? "none" : "mainText"} 
+                    onClick = {() => this.setState({anim: true})} 
+                    style = {this.state.anim ? an : null} >
                     <h1>Welcome</h1>
                     <span>to</span>
                     <h2><span>ICA</span> mobile shop</h2>  
                </div>       
                 <Carousel>                
                     <Carousel.Item>
-                        <img
+                        <img   
+                            onLoad={() => this.handleImageLoaded()}                         
                             className="d-block w-100"
                             src={images}
                             alt="First slide"
@@ -40,9 +49,7 @@ export default class MainClass extends React.Component {
                             alt="Third slide"
                         />
                     </Carousel.Item>
-                </Carousel>
-                {/* <h1>Welcome</h1><span>to</span>
-                <h2>ICA mobile shop</h2> */}
+                </Carousel>       
             </div>        
         )
     }   
