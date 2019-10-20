@@ -1,5 +1,17 @@
 .contactInfo {
-    background: rgb(221, 98, 98);
-    height: 100vh;
-    color: #fff;
+    background: #f2f2f2;   
+    height: 100vh;   
+    background: url("../../images/cityPhone.jpg") no-repeat center; 
+    background-size: cover;
+    .wrap {
+        background: #ebecedc7;
+        width: 100%;
+        height: 100%;
+        padding: 60px;
+    }
+    h1 {
+        @media (max-width: 400px) {
+           font-size: 35px;
+        }
+    }       
 }

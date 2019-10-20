@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import "./Home.scss"
-import mainImage from "../../images/mainImage.jpg"
-import Button from "../Button/Button"
 import "../Button/Button.scss"
 import MainClass from "../MainClass/MainClass"
+import Info from "../Info/Info"
+import Contact from "../Contact/Contact"
 
 export default class Home extends React.Component {    
     state = {
@@ -15,7 +15,7 @@ export default class Home extends React.Component {
     } 
     
     handleScroll = () => {
-        if(window.pageYOffset > window.innerHeight) { 
+        if(window.pageYOffset > window.innerHeight * 2) { 
             this.setState({visible: true });  
         } 
     }
@@ -24,6 +24,7 @@ export default class Home extends React.Component {
         return (
             <div>
                 <MainClass />  
+                <Info />  
                 <div className="container-fluid Home" id="Home">                            
                     {/* <h1>Welcome to<br></br>ICA MobileShop</h1>  */}
                     <div className="row">
@@ -48,7 +49,8 @@ export default class Home extends React.Component {
                             </Button>
                         </Link>  */}                
                     </div>    
-                </div>            
+                </div>                    
+                <Contact />      
             </div>
         )
     }

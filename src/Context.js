@@ -26,7 +26,7 @@ class ProductProvider extends Component {
         })
     }
     getItem = (id) => {
-        const product = this.state.products.find(item => item.id == id);
+        const product = this.state.products.find(item => item.id === id);
         return product;
     }
     handleDetail = (id) => {
@@ -72,7 +72,7 @@ class ProductProvider extends Component {
     increment = (id) => {
         // this.incMethod();
         let tempCart = [...this.state.cart];
-        let selected = tempCart.find(item => item.id == id);
+        let selected = tempCart.find(item => item.id === id);
 
         selected.count = selected.count + 1;
         selected.total = selected.count * selected.price;
@@ -88,7 +88,7 @@ class ProductProvider extends Component {
 
     decrement = (id) => {
         let tempCart = [...this.state.cart];
-        let selected = tempCart.find(item => item.id == id);        
+        let selected = tempCart.find(item => item.id === id);        
         selected.count = selected.count - 1;
 
         if(selected.count === 0) {
@@ -109,7 +109,7 @@ class ProductProvider extends Component {
         let tempProducts = [...this.state.products];
         let tempCart = [...this.state.cart];
 
-        tempCart = tempCart.filter(item => item.id != id);
+        tempCart = tempCart.filter(item => item.id !== id);
 
         let index = tempProducts.indexOf(this.getItem(id));
         let product = tempProducts[index];

@@ -98,6 +98,15 @@ html {
   outline: none;
 }
 
+@media (max-width: 768px) {
+  .product .card .cartBtn {
+    position: absolute;
+    right: 0;
+    -webkit-transform: translate(-20%, 100%) !important;
+            transform: translate(-20%, 100%) !important;
+  }
+}
+
 .product .card:hover {
   -webkit-box-shadow: 2px 2px 12px #000;
           box-shadow: 2px 2px 12px #000;

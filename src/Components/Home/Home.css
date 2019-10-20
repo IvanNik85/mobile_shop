@@ -145,22 +145,4 @@ html {
     visibility: visible;
   }
 }
-
-@-webkit-keyframes delayHeader {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes delayHeader {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 /*# sourceMappingURL=Home.css.map */

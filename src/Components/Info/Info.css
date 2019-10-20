@@ -1,0 +1,161 @@
+.wrapDiv {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f2f2f2;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.wrapDiv h1 {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.cardCont {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .cardCont {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 350px) {
+  .cardCont {
+    padding: 0;
+  }
+}
+
+.infoCard {
+  position: relative;
+  width: 320px;
+  padding: 40px;
+  text-align: justify;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  overflow: hidden;
+}
+
+.infoCard:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: calc(-100% + 4px);
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.infoCard:hover:before {
+  bottom: 0;
+}
+
+.infoCard:nth-child(1):before {
+  background: #ec164c;
+}
+
+.infoCard:nth-child(2):before {
+  background: #2196f3;
+}
+
+.infoCard:nth-child(3):before {
+  background: #ff4500;
+}
+
+.infoCard div {
+  position: relative;
+  z-index: 2;
+}
+
+.infoCard div h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .infoCard div h3 {
+    color: #fff;
+  }
+}
+
+.infoCard div p {
+  font-size: 18px;
+  color: #777;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 400px) {
+  .infoCard div p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .infoCard div p {
+    color: #fff;
+  }
+}
+
+.infoCard div a {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  background: #fff;
+  color: #777;
+  padding: 6px 9px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.infoCard:hover h3, .infoCard:hover p {
+  color: #fff;
+}
+
+@media (max-width: 400px) {
+  .infoCard {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .infoCard:nth-child(1) {
+    background: #ec164c;
+  }
+  .infoCard:nth-child(2) {
+    background: #2196f3;
+  }
+  .infoCard:nth-child(3) {
+    background: #ff4500;
+  }
+}
+/*# sourceMappingURL=Info.css.map */

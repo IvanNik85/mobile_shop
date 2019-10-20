@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Navbar from '../../../node_modules/react-bootstrap/Navbar';
 import Nav from '../../../node_modules/react-bootstrap/Nav';
-import NavDropdown from '../../../node_modules/react-bootstrap/NavDropdown';
+// import NavDropdown from '../../../node_modules/react-bootstrap/NavDropdown';
 // import Form from '../../../node_modules/react-bootstrap/Form';
 // import FormControl from '../../../node_modules/react-bootstrap/FormControl';
 // import Button from '../../../node_modules/react-bootstrap/Form';
@@ -43,10 +43,11 @@ class NavbarMain extends Component {
                 <Navbar.Collapse id="basic-navbar-nav">  
                     <Nav className="mr-auto">
                         <Nav.Link href="./">Home</Nav.Link>
+                        <Nav.Link href="./#Info">Info</Nav.Link>
+                        {/* <Nav.Link href="./#Home">Main</Nav.Link> */}
                         <Nav.Link href="./ProductList">Products</Nav.Link>                   
                         <Nav.Link href="./Cart"><i className="fas fa-cart-plus mx-2"></i>Cart</Nav.Link>
-                        <Nav.Link href="./Contact">Contact</Nav.Link>
-                        <Nav.Link href="./#Home">Main</Nav.Link>
+                        <Nav.Link href="./#Contact">Contact</Nav.Link>                        
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

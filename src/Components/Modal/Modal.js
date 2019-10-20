@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import "./Modal.scss"
-import Button from "../Button/Button"
 import { Link } from "react-router-dom"
 import { ProductConsumer } from "../../Context"
 
@@ -9,7 +8,7 @@ export default class Modal extends Component {
         return (
             <ProductConsumer>
                 {(value) => {
-                    const { modalOpen, closeModal } = value;
+                    const { modalOpen} = value;
                     const { title, img, price } = value.modalProduct;
 
                     if (!modalOpen) {

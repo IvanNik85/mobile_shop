@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,KAAK;CAOhB;;AAXD,AAKI,MALE,CAKF,EAAE,CAAC;EACC,SAAS,EAAE,IAAI;CAIlB;;AAHG,MAAM,EAAE,SAAS,EAAE,KAAK;EAPhC,AAKI,MALE,CAKF,EAAE,CAAC;IAGK,SAAS,EAAE,IAAI;GAEtB",
+    "sources": [
+        "EmptyCart.scss"
+    ],
+    "names": [],
+    "file": "EmptyCart.css"
+}
