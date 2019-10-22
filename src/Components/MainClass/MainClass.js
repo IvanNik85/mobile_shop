@@ -18,7 +18,7 @@ export default class MainClass extends React.Component {
     render() {        
         let an = {animation: "disapearCircle 3s forwards"}
         return (
-            <div id="Main">  
+            <div id="Main">              
                <div className={this.state.isLoading? "none" : "mainText"} 
                     onClick = {() => this.setState({anim: true})} 
                     style = {this.state.anim ? an : null} >

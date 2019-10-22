@@ -1,39 +1,57 @@
 import React, { Component } from 'react'
 import "./Product.scss"
-import {Link} from "react-router-dom"
-import {ProductConsumer} from "../../Context"
+import { Link } from "react-router-dom"
+import { ProductConsumer } from "../../Context"
 import PropTypes from "prop-types"
 
 export default class Product extends Component {
+    state = {
+        isLoading: true
+    }
+    handleLoading = () => {       
+        this.setState({ isLoading: false })       
+    }
     render() {
-        const {id, title, img, price, inCart} = this.props.product;          
+        const { id, title, img, price, inCart } = this.props.product;
         return (
             <ProductConsumer>
-                {value => (                   
+                {value => (
                     <div className="col-9 col-md-6 col-lg-3 mx-auto product">
-                        <div className="card" 
-                        onClick={() => value.handleDetail(id)}>
-                        <h1>{title}</h1>
+                        <div className={this.state.isLoading ? "loaderDiv" : "none"}>
+                            <div className="loader">
+                                <div className="face face1">
+                                    <div className="circle">
+                                    </div>
+                                </div>
+                                <div className="face face2">
+                                    <div className="circle">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card"
+                            onClick={() => value.handleDetail(id)}>
+                            <h1>{title}</h1>
                             <Link to="./Details">
-                                <img src={img} alt="phone1"/>
+                                <img src={img} onLoad={() => this.handleLoading()} alt="phone1" />
                             </Link>
                             <div className="cardFooter">
-                                <button 
-                                    className={inCart ? "inCart" : "cartBtn" }
-                                    disabled={inCart ? true : false}                                    
+                                <button
+                                    className={inCart ? "inCart" : "cartBtn"}
+                                    disabled={inCart ? true : false}
                                     onClick={() => {
                                         value.addToCart(id);
                                         value.openModal(id);
-                                        }
-                                    }                                                                     
+                                    }
+                                    }
                                 >
-                                    {inCart?<span>In Cart</span>:<i className="fas fa-cart-plus"></i>}                        
+                                    {inCart ? <span>In Cart</span> : <i className="fas fa-cart-plus"></i>}
                                 </button>
                                 <p>{price}€</p>
                             </div>
-                        </div>                
+                        </div>
                     </div>
-                )}                
+                )}
             </ProductConsumer>
         )
     }

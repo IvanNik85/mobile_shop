@@ -4,7 +4,20 @@
 // }
 .product {
     padding: 5px;
-
+    position: relative;
+    .loaderDiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border: 5px solid #fff;  
+        width: 100%;    
+        height: 100%;         
+        background: rgba(0, 0, 0, .7);
+        display: flex;
+        justify-content: center;
+        align-items: center;             
+    }
     .card {  
         border: 1px solid rgba(184, 185, 185, 0.5);
         box-sizing: border-box;            
@@ -98,6 +111,82 @@
         }
     }
 }
+//Product images loader
+.loader {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;            
+    border-radius: 50%;   
+    .face {
+        position: absolute;
+        border: 2px solid #7a889c8c;        
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 2px;                   
+            transform-origin: left;   
+            &:before {
+               content: "";
+               position: absolute;
+               top: -4px;
+               right: -7px;
+               height: 10px;
+               width: 10px; 
+               border-radius: 50%;
+               background: #fff;
+            }                 
+        }        
+    }
+    .face1 {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;   
+        border-radius: 50%;   
+        border-left: 2px solid #ff0;
+        border-top: 2px solid #ff0;
+        animation: loading 3s linear infinite; 
+        .circle {
+            transform: rotate(-45deg);
+            &:before {
+                background: #ff0;
+                box-shadow: 0 0 20px #ff0,
+                            0 0 40px #ff0,
+                            0 0 60px #ff0,
+                            0 0 80px #ff0,
+                            0 0 100px #ff0,
+                            0 0 0 5px rgba(255,255,255,.1);
+            }     
+        }                        
+    }
+    .face2 {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;  
+        border-radius: 50%;
+        border-right: 2px solid #03a9f4;
+        border-bottom: 2px solid #03a9f4;
+        animation: loading 3s linear infinite reverse;
+        .circle {
+            transform: rotate(-45deg);  
+            &:before {
+                background: #03a9f4;
+                box-shadow: 0 0 20px #03a9f4,
+                            0 0 40px #03a9f4,
+                            0 0 60px #03a9f4,
+                            0 0 80px #03a9f4,
+                            0 0 100px #03a9f4,
+                            0 0 0 5px rgba(0, 183, 255,.1);
+            }           
+        }
+    }
+}   
 @media (min-width: 420px) and (max-width: 992px) {
     .card {
         .cartBtn {
@@ -120,6 +209,21 @@
         transform: scale(1);
     }
 }
-
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
 
 
