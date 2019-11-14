@@ -5,6 +5,7 @@ import "../Button/Button.scss"
 import MainClass from "../MainClass/MainClass"
 import Info from "../Info/Info"
 import Contact from "../Contact/Contact"
+import News from "../News/News"
 
 export default class Home extends React.Component {    
     state = {
@@ -49,7 +50,8 @@ export default class Home extends React.Component {
                             </Button>
                         </Link>  */}                
                     </div>    
-                </div>                    
+                </div>   
+                <News />               
                 <Contact />      
             </div>
         )

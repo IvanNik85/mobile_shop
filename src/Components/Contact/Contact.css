@@ -5,8 +5,12 @@
   background-size: cover;
 }
 
+.contactInfo h1 {
+  color: #fff;
+}
+
 .contactInfo .wrap {
-  background: #ebecedc7;
+  background: #31506fc7;
   width: 100%;
   height: 100%;
   padding: 60px;
