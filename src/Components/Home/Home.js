@@ -11,22 +11,32 @@ export default class Home extends React.Component {
     state = {
         visible: false    
     }    
-    componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
+    myref = React.createRef();
+    observer = new IntersectionObserver(entries => {
+        if(entries[0].intersectionRatio > 0) {
+            this.setState({visible: true }); 
+        } else {
+            this.setState({visible: false }); 
+        }
+    })         
+    
+    componentDidMount() {       
+        this.observer.observe(this.myref.current)
+        // window.addEventListener("scroll", this.handleScroll); 
     } 
     
-    handleScroll = () => {
-        if(window.pageYOffset > window.innerHeight * 2) { 
-            this.setState({visible: true });  
-        } 
-    }
+    // handleScroll = () => {
+    //     if(window.pageYOffset > window.innerHeight * 2) { 
+    //         this.setState({visible: true });  
+    //     } 
+    // }
     render () {    
-        const styleIt = {animation: 'show 2s ease forwards'}
+        const styleIt = {animation: 'show 2s ease forwards'}        
         return (
             <div>
                 <MainClass />  
                 <Info />  
-                <div className="container-fluid Home" id="Home">                            
+                <div className="container-fluid Home" id="Home" ref={this.myref}>                            
                     {/* <h1>Welcome to<br></br>ICA MobileShop</h1>  */}
                     <div className="row">
                         {/* <img src={mainImage} className="img-fluid mainImg" alt="mainImage"/> */}
