@@ -3,8 +3,31 @@ import "./News.css"
 
 export default class News extends React.Component {
     state = {
-        click: false       
+        click: false,
+        anim: false,
+        div: false,
+        arrow: false,
+        rotate: false
     }
+    myref1 = React.createRef();
+    options = {
+        rootMargin: "-300px 0px"
+    }
+    observer = new IntersectionObserver(entries => {
+        if(!entries[0].isIntersecting) {
+            return;
+        }
+        window.innerWidth < 768 && this.setState({ rotate: true })
+            this.setState({
+                anim: true,
+                div: true,
+                arrow: true
+            });    
+    }, this.options)            
+    
+    componentDidMount() {       
+        this.observer.observe(this.myref1.current); 
+    } 
     changeValue = (q) => {
         window.innerWidth > 1140 && this.setState({ click: q })
     }
@@ -20,9 +43,9 @@ export default class News extends React.Component {
         },50)         
     }
 
-    render() {       
+    render() {        
         return (
-            <div className="container-fluid" id="News">
+            <div className="container-fluid" id="News" ref = {this.myref1}>
                 <h1>News</h1>
                 <div className="row">
                     <div className="col-md-9 col-lg-8 content">
@@ -30,7 +53,7 @@ export default class News extends React.Component {
                             <div className="navMenu"></div>
                         </div>
                         <div className="row">
-                            <div className="col-12 col-md-10 col-xl-8 news">
+                            <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s 0s forwards"} : null}>
                                 <div className="image"></div>
                                 <div className="text">
                                     <h5>News title</h5>
@@ -40,7 +63,7 @@ export default class News extends React.Component {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 col-md-10 col-xl-8 news">
+                            <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s .5s forwards"} : null}>
                                 <div className="image"></div>
                                 <div className="text">
                                     <h5>News title</h5>
@@ -50,7 +73,7 @@ export default class News extends React.Component {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 col-md-10 col-xl-8 news">                                
+                            <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s 1s forwards"} : null}>                                
                                 <div className="image"></div>
                                 <div className="text">
                                     <h5>News title</h5>
@@ -65,8 +88,10 @@ export default class News extends React.Component {
                     </div>
                     <div className="col-md-3 col-lg-4 circleDiv">
                        <div className="outsideDiv">
-                            <div className="sideDiv" style={this.state.click ? { transform: `rotate(${(this.state.click * 45)}deg)` } : null}>
-                                <div className="circle">
+                            <div className={"sideDiv" + (this.state.anim ? ' rotateA' : " ")} 
+                            style={this.state.click ? { transform: `rotate(${(this.state.click * 45)}deg)` } : null}
+                            >
+                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
                                     <span
                                         onClick={() => {
                                             this.changeValue(-3);
@@ -77,7 +102,7 @@ export default class News extends React.Component {
                                         New
                                     </span>
                                 </div>
-                                <div className="circle">
+                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
                                     <span
                                         onClick={() => {
                                             this.changeValue(3)
@@ -88,7 +113,7 @@ export default class News extends React.Component {
                                         Actual
                                     </span>
                                 </div>
-                                <div className="circle">
+                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
                                     <span
                                         onClick={() => {
                                             this.changeValue(-1);
@@ -99,7 +124,7 @@ export default class News extends React.Component {
                                         Older
                                     </span>
                                 </div>
-                                <div className="circle">
+                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
                                     <span
                                         onClick={() => {
                                             this.changeValue(1);
@@ -111,7 +136,7 @@ export default class News extends React.Component {
                                     </span>
                                 </div>                                
                             </div>                               
-                            <div className="activeNews"></div>                 
+                           <div className={"activeNews" + (this.state.arrow ? ' revealA' : " ")}></div>  
                        </div>   
                     </div>
                 </div>

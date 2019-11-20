@@ -42,7 +42,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  visibility: hidden;
+  opacity: 0;
 }
 
 .Home .mainButtons .pulse {
@@ -130,9 +130,12 @@ html {
   0% {
     top: 10%;
   }
+  40% {
+    opacity: 1;
+  }
   100% {
     top: 50%;
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -140,9 +143,12 @@ html {
   0% {
     top: 10%;
   }
+  40% {
+    opacity: 1;
+  }
   100% {
     top: 50%;
-    visibility: visible;
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=Home.css.map */

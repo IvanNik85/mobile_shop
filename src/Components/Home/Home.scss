@@ -17,7 +17,7 @@
         flex-flow: column wrap;
         align-items: center;
         justify-content: center;
-        visibility: hidden;
+        opacity: 0;
         // animation: show 2s ease forwards;       
 
         .pulse {
@@ -80,9 +80,12 @@
         0% {        
             top: 10%;            
         }
+        40% {
+            opacity: 1;
+        }
         100% { 
-            top: 50%;
-            visibility: visible;
+            top: 50%;    
+            opacity: 1;        
         }
     } 
 }

@@ -39,7 +39,7 @@ $laptop: 1140px;
             height: 300px;
             border: 4px solid #000;
             transform: rotate(45deg) scale(1);
-            animation: rotateAnim 3s;
+            // animation: rotateAnim 3s;
             border-radius: 10px;
             background: #1d5ab5;
             display: flex;
@@ -82,7 +82,7 @@ $laptop: 1140px;
             top: 38%;
             left: 44%;        
             opacity: 0;    
-            animation: reveal1 2s 2s forwards;
+            // animation: reveal1 2s 2s forwards;
             z-index: 1;     
             @include responsive($laptop) {
                 display: none;
@@ -126,7 +126,7 @@ $laptop: 1140px;
                 height: 70px;                
             }       
             @include responsive($phones) {          
-                animation: circleRotate 1s;                 
+                // animation: circleRotate 1s;                 
             }                        
             &:hover {
                 background: linear-gradient(to right top, #9c1414, #3c0a0a);
@@ -150,8 +150,8 @@ $laptop: 1140px;
     margin: 2px auto;
     border: 2px solid #a09f9f;   
     display: flex;   
-    transform: translateX(-55px); 
-    animation: moveNews 2s forwards;   
+    transform: translateX(-100px); 
+    // animation: moveNews 2s forwards;   
     
     .image {
         box-sizing: border-box;            
@@ -205,16 +205,26 @@ $laptop: 1140px;
     position: absolute;
     animation: downUpMotion .8s forwards !important;
 }
+.rotateA {
+    animation: rotateAnim 3s;
+}
+.revealA {
+    animation: reveal1 2s 2s forwards;
+}
+.rotateSmall {
+    animation: circleRotate 1s;
+}
 @keyframes rotateAnim {
-    0% {
+    0% { 
         transform: rotate(225deg) scale(.1);
     }
-    100% {
+    100% {        
         transform: rotate(45deg) scale(1);
     }
 }
 @keyframes reveal1 {
     0% {
+        opacity: 0;
         position: absolute;
         top: 50%;        
     }
@@ -246,7 +256,7 @@ $laptop: 1140px;
 }
 @keyframes moveNews {
     0% {
-       transform: translateX(-55px);        
+       transform: translateX(-100px);        
     }    
     100% {       
         transform: translateX(0);      
