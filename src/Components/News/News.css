@@ -47,7 +47,8 @@
   -webkit-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
   border-radius: 10px;
-  background: #1d5ab5;
+  background: url("../../images/shapes1.png") no-repeat center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,11 +192,9 @@
 }
 
 #News .circle span:hover {
-  background: -webkit-gradient(linear, left bottom, right top, from(#9c1414), to(#3c0a0a));
-  background: linear-gradient(to right top, #9c1414, #3c0a0a);
+  background: -webkit-gradient(linear, left bottom, right top, from(#ccac12), to(#c71f1f));
+  background: linear-gradient(to right top, #ccac12, #c71f1f);
   text-shadow: 0px 0px 20px #fff;
-  -webkit-transition: .8s;
-  transition: .8s;
 }
 
 #News .more a {
@@ -291,13 +290,13 @@
 }
 
 .rotateA {
-  -webkit-animation: rotateAnim 3s;
-          animation: rotateAnim 3s;
+  -webkit-animation: rotateAnim 2s;
+          animation: rotateAnim 2s;
 }
 
 .revealA {
-  -webkit-animation: reveal1 2s 2s forwards;
-          animation: reveal1 2s 2s forwards;
+  -webkit-animation: reveal1 1.2s 1.3s forwards;
+          animation: reveal1 1.2s 1.3s forwards;
 }
 
 .rotateSmall {

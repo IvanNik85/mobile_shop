@@ -78,10 +78,10 @@ export default class News extends React.Component {
                                 <div className="text">
                                     <h5>News title</h5>
                                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ducimus repudiandae perspiciatis assumenda deleniti vitae laudantium aliquid sed molestias totam molestiae, nulla expedita facere, incidunt unde nisi officia atque? Omnis laborum excepturi facere eos quisquam cupiditate provident, cum maiores aliquam nam. Sequi, sunt? Nemo maxime reprehenderit dignissimos saepe voluptate similique quae a dolor. Harum suscipit placeat veniam sunt exercitationem ex eligendi vero accusantium sapiente sint quis distinctio aliquam facilis ducimus earum quisquam dolore cumque inventore eum, perferendis sed! Alias error dicta fugiat sapiente totam? Quo dignissimos reprehenderit facilis voluptates est ut maxime? Itaque possimus ea eos odio mollitia ipsum doloremque!</p>  
-                                    <a href="##" className="readMore">Read more<i className="fas fa-angle-double-right"></i></a>
+                                    <a href="##" className="readMore" onClick = {() => {alert(`asdfasdf`)}}>Read more<i className="fas fa-angle-double-right"></i></a>
                                 </div>
                                 <div className="more">
-                                    <a href="##">More News <i className="fas fa-angle-double-right"></i></a>
+                                    {/* <a href="##">More News <i className="fas fa-angle-double-right"></i></a> */}
                                 </div>
                             </div>
                         </div>                        

@@ -60,11 +60,10 @@
   overflow: hidden;
 }
 
-.infoCard:before {
-  content: "";
+.infoCard .nova {
   position: absolute;
   left: 0;
-  bottom: calc(-100% + 4px);
+  bottom: 0;
   width: 100%;
   height: 100%;
   background: #000;
@@ -73,19 +72,20 @@
   transition: all 0.5s ease-in-out;
 }
 
-.infoCard:hover:before {
-  bottom: 0;
+.infoCard:hover .nova {
+  -webkit-transform: translateY(calc(-100% + 4px));
+          transform: translateY(calc(-100% + 4px));
 }
 
-.infoCard:nth-child(1):before {
+.infoCard:nth-child(1) > .nova {
   background: #ec164c;
 }
 
-.infoCard:nth-child(2):before {
+.infoCard:nth-child(2) > .nova {
   background: #2196f3;
 }
 
-.infoCard:nth-child(3):before {
+.infoCard:nth-child(3) > .nova {
   background: #ff4500;
 }
 
@@ -97,18 +97,20 @@
 .infoCard div h3 {
   margin-bottom: 20px;
   font-size: 30px;
-  color: #777;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
   .infoCard div h3 {
     color: #fff;
+    -webkit-animation: none !important;
+            animation: none !important;
   }
 }
 
 .infoCard div p {
   font-size: 18px;
-  color: #777;
+  color: #fff;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -122,6 +124,8 @@
 @media (max-width: 768px) {
   .infoCard div p {
     color: #fff;
+    -webkit-animation: none !important;
+            animation: none !important;
   }
 }
 
@@ -137,7 +141,9 @@
 }
 
 .infoCard:hover h3, .infoCard:hover p {
-  color: #fff;
+  color: #fff !important;
+  -webkit-transition: color .7s;
+  transition: color .7s;
 }
 
 @media (max-width: 400px) {
@@ -156,6 +162,42 @@
   }
   .infoCard:nth-child(3) {
     background: #ff4500;
+  }
+}
+
+@-webkit-keyframes fillDown {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: calc(-100% + 4px);
+  }
+}
+
+@keyframes fillDown {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: calc(-100% + 4px);
+  }
+}
+
+@-webkit-keyframes colorChange {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #777;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #777;
   }
 }
 /*# sourceMappingURL=Info.css.map */
