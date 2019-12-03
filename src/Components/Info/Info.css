@@ -102,7 +102,7 @@
 
 @media (max-width: 768px) {
   .infoCard div h3 {
-    color: #fff;
+    color: #fff !important;
     -webkit-animation: none !important;
             animation: none !important;
   }
@@ -123,7 +123,7 @@
 
 @media (max-width: 768px) {
   .infoCard div p {
-    color: #fff;
+    color: #fff !important;
     -webkit-animation: none !important;
             animation: none !important;
   }

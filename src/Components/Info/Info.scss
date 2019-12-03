@@ -65,7 +65,7 @@
         color: #fff;
         // animation: colorChange 1s;
         @media (max-width: 768px) {
-            color: #fff;
+            color: #fff !important;
             animation: none !important;
         }    
     }
@@ -78,7 +78,7 @@
             font-size: 14px;
         }    
         @media (max-width: 768px) {
-            color: #fff;
+            color: #fff !important;
             animation: none !important;
         }                    
     }

@@ -1,5 +1,7 @@
 import React from 'react'
-import "./News.css"
+import "./News.scss"
+import { ProductConsumer } from "../../Context"
+import NewsCard from "./NewsCard"
 
 export default class News extends React.Component {
     state = {
@@ -43,105 +45,105 @@ export default class News extends React.Component {
         },50)         
     }
 
-    render() {        
+    render() {     
+        // const { id, title, img, price, inCart } = this.props.items    
         return (
-            <div className="container-fluid" id="News" ref = {this.myref1}>
-                <h1>News</h1>
-                <div className="row">
-                    <div className="col-md-9 col-lg-8 content">
-                        <div className="row">
-                            <div className="navMenu"></div>
-                        </div>
-                        <div className="row">
-                            <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s 0s forwards"} : null}>
-                                <div className="image"></div>
-                                <div className="text">
-                                    <h5>News title</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ducimus repudiandae perspiciatis assumenda deleniti vitae laudantium aliquid sed molestias totam molestiae, nulla expedita facere, incidunt unde nisi officia atque? Omnis laborum excepturi facere eos quisquam cupiditate provident, cum maiores aliquam nam. Sequi, sunt? Nemo maxime reprehenderit dignissimos saepe voluptate similique quae a dolor. Harum suscipit placeat veniam sunt exercitationem ex eligendi vero accusantium sapiente sint quis distinctio aliquam facilis ducimus earum quisquam dolore cumque inventore eum, perferendis sed! Alias error dicta fugiat sapiente totam? Quo dignissimos reprehenderit facilis voluptates est ut maxime? Itaque possimus ea eos odio mollitia ipsum doloremque!</p>
-                                    <a href="##" className="readMore">Read more<i className="fas fa-angle-double-right"></i></a>
+            <ProductConsumer>
+                {value => {                
+                return (
+                <div className="container-fluid" id="News" ref = {this.myref1}>
+                    <h1>News</h1>
+                    <div className="row">
+                        <div className="col-md-9 col-lg-8 content">
+                            <div className="row">
+                                <div className="navMenu"></div>
+                            </div>
+                            <div className="row" style={this.state.div ? {animation: "moveNews 1.5s forwards"} : null}>                                                                 
+                                {value.news.map(item => {
+                                    return <NewsCard key={item.id} items={item}/>                                       
+                                })}      
+                            </div>
+                            {/* <div className="row">
+                                <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s .5s forwards"} : null}>
+                                    <div className="image"></div>
+                                    <div className="text">
+                                        <h5>News title</h5>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ducimus repudiandae perspiciatis assumenda deleniti vitae laudantium aliquid sed molestias totam molestiae, nulla expedita facere, incidunt unde nisi officia atque? Omnis laborum excepturi facere eos quisquam cupiditate provident, cum maiores aliquam nam. Sequi, sunt? Nemo maxime reprehenderit dignissimos saepe voluptate similique quae a dolor. Harum suscipit placeat veniam sunt exercitationem ex eligendi vero accusantium sapiente sint quis distinctio aliquam facilis ducimus earum quisquam dolore cumque inventore eum, perferendis sed! Alias error dicta fugiat sapiente totam? Quo dignissimos reprehenderit facilis voluptates est ut maxime? Itaque possimus ea eos odio mollitia ipsum doloremque!</p>
+                                        <a href="##" className="readMore">Read more<i className="fas fa-angle-double-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
+                            <div className="row">
+                                <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s 1s forwards"} : null}>                                
+                                    <div className="image"></div>
+                                    <div className="text">
+                                        <h5>News title</h5>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ducimus repudiandae perspiciatis assumenda deleniti vitae laudantium aliquid sed molestias totam molestiae, nulla expedita facere, incidunt unde nisi officia atque? Omnis laborum excepturi facere eos quisquam cupiditate provident, cum maiores aliquam nam. Sequi, sunt? Nemo maxime reprehenderit dignissimos saepe voluptate similique quae a dolor. Harum suscipit placeat veniam sunt exercitationem ex eligendi vero accusantium sapiente sint quis distinctio aliquam facilis ducimus earum quisquam dolore cumque inventore eum, perferendis sed! Alias error dicta fugiat sapiente totam? Quo dignissimos reprehenderit facilis voluptates est ut maxime? Itaque possimus ea eos odio mollitia ipsum doloremque!</p>  
+                                        <a href="##" className="readMore" onClick = {() => {console.log(this.props.items )}}>Read more<i className="fas fa-angle-double-right"></i></a>
+                                    </div>
+                                    <div className="more">
+                                        {/* <a href="##">More News <i className="fas fa-angle-double-right"></i></a> */}
+                                    {/* </div>
+                                </div>
+                            </div>                         */}
                         </div>
-                        <div className="row">
-                            <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s .5s forwards"} : null}>
-                                <div className="image"></div>
-                                <div className="text">
-                                    <h5>News title</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ducimus repudiandae perspiciatis assumenda deleniti vitae laudantium aliquid sed molestias totam molestiae, nulla expedita facere, incidunt unde nisi officia atque? Omnis laborum excepturi facere eos quisquam cupiditate provident, cum maiores aliquam nam. Sequi, sunt? Nemo maxime reprehenderit dignissimos saepe voluptate similique quae a dolor. Harum suscipit placeat veniam sunt exercitationem ex eligendi vero accusantium sapiente sint quis distinctio aliquam facilis ducimus earum quisquam dolore cumque inventore eum, perferendis sed! Alias error dicta fugiat sapiente totam? Quo dignissimos reprehenderit facilis voluptates est ut maxime? Itaque possimus ea eos odio mollitia ipsum doloremque!</p>
-                                    <a href="##" className="readMore">Read more<i className="fas fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-12 col-md-10 col-xl-8 news" style={this.state.div ? {animation: "moveNews 1s 1s forwards"} : null}>                                
-                                <div className="image"></div>
-                                <div className="text">
-                                    <h5>News title</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ducimus repudiandae perspiciatis assumenda deleniti vitae laudantium aliquid sed molestias totam molestiae, nulla expedita facere, incidunt unde nisi officia atque? Omnis laborum excepturi facere eos quisquam cupiditate provident, cum maiores aliquam nam. Sequi, sunt? Nemo maxime reprehenderit dignissimos saepe voluptate similique quae a dolor. Harum suscipit placeat veniam sunt exercitationem ex eligendi vero accusantium sapiente sint quis distinctio aliquam facilis ducimus earum quisquam dolore cumque inventore eum, perferendis sed! Alias error dicta fugiat sapiente totam? Quo dignissimos reprehenderit facilis voluptates est ut maxime? Itaque possimus ea eos odio mollitia ipsum doloremque!</p>  
-                                    <a href="##" className="readMore" onClick = {() => {alert(`asdfasdf`)}}>Read more<i className="fas fa-angle-double-right"></i></a>
-                                </div>
-                                <div className="more">
-                                    {/* <a href="##">More News <i className="fas fa-angle-double-right"></i></a> */}
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                    <div className="col-md-3 col-lg-4 circleDiv">
-                       <div className="outsideDiv">
-                            <div className={"sideDiv" + (this.state.anim ? ' rotateA' : " ")} 
-                            style={this.state.click ? { transform: `rotate(${(this.state.click * 45)}deg)` } : null}
-                            >
-                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
-                                    <span
-                                        onClick={() => {
-                                            this.changeValue(-3);
-                                            this.downUpMotion();
+                        <div className="col-md-3 col-lg-4 circleDiv">
+                        <div className="outsideDiv">
+                                <div className={"sideDiv" + (this.state.anim ? ' rotateA' : " ")} 
+                                style={this.state.click ? { transform: `rotate(${(this.state.click * 45)}deg)` } : null}
+                                >
+                                    <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
+                                        <span
+                                            onClick={() => {
+                                                this.changeValue(-3);
+                                                this.downUpMotion();
+                                                }
                                             }
-                                        }
-                                        style={this.state.click ? this.rotateCircle() : null}>
-                                        New
-                                    </span>
-                                </div>
-                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
-                                    <span
-                                        onClick={() => {
-                                            this.changeValue(3)
-                                            this.downUpMotion();
+                                            style={this.state.click ? this.rotateCircle() : null}>
+                                            New
+                                        </span>
+                                    </div>
+                                    <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
+                                        <span
+                                            onClick={() => {
+                                                this.changeValue(3)
+                                                this.downUpMotion();
+                                                } 
+                                            }
+                                            style={this.state.click ? this.rotateCircle() : null}>
+                                            Actual
+                                        </span>
+                                    </div>
+                                    <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
+                                        <span
+                                            onClick={() => {
+                                                this.changeValue(-1);
+                                                this.downUpMotion();
+                                                }
                                             } 
-                                        }
-                                        style={this.state.click ? this.rotateCircle() : null}>
-                                        Actual
-                                    </span>
-                                </div>
-                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
-                                    <span
-                                        onClick={() => {
-                                            this.changeValue(-1);
-                                            this.downUpMotion();
-                                            }
-                                        } 
-                                        style={this.state.click ? this.rotateCircle() : null}>
-                                        Older
-                                    </span>
-                                </div>
-                                <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
-                                    <span
-                                        onClick={() => {
-                                            this.changeValue(1);
-                                            this.downUpMotion();
-                                            }
-                                        } 
-                                        style={this.state.click ? this.rotateCircle() : null}>
-                                        Popular
-                                    </span>
-                                </div>                                
-                            </div>                               
-                           <div className={"activeNews" + (this.state.arrow ? ' revealA' : " ")}></div>  
-                       </div>   
+                                            style={this.state.click ? this.rotateCircle() : null}>
+                                            Older
+                                        </span>
+                                    </div>
+                                    <div className={"circle" + (this.state.rotate ? ' rotateSmall' :  " ")}>
+                                        <span
+                                            onClick={() => {
+                                                this.changeValue(1);
+                                                this.downUpMotion();
+                                                }
+                                            } 
+                                            style={this.state.click ? this.rotateCircle() : null}>
+                                            Popular
+                                        </span>
+                                    </div>                                
+                                </div>                               
+                            <div className={"activeNews" + (this.state.arrow ? ' revealA' : " ")}></div>  
+                        </div>   
+                        </div>
                     </div>
                 </div>
-
-            </div>
+                )}}
+            </ProductConsumer>
         )
     }
 }

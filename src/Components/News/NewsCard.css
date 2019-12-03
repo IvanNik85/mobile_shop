@@ -1,0 +1,86 @@
+.news {
+  width: 70%;
+  height: 180px;
+  padding: 0;
+  margin: 2px 150px;
+  border: 2px solid #a09f9f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+.news .image {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: black;
+  min-width: 278px;
+  height: 180px;
+  margin: -2px;
+}
+
+.news .image img {
+  width: 100%;
+  height: 180px;
+}
+
+.news .text {
+  width: 76%;
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+.news .text h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ec164c;
+}
+
+.news .text p {
+  max-height: 100px;
+  overflow: hidden;
+  margin: 0;
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 768px) {
+  .news .text p {
+    font-size: 15px;
+  }
+}
+
+.news .text a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 25px;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.news .text a i {
+  margin: 2px 5px 0 5px;
+}
+
+.news .text a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .news {
+    margin: 5px 100px;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=NewsCard.css.map */

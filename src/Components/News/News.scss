@@ -143,65 +143,7 @@ $laptop: 1140px;
             bottom: -50px;
         }
     }
-}  
-.news {
-    width: 70%;
-    height: 180px;
-    padding: 0;
-    margin: 2px auto;
-    border: 2px solid #a09f9f;   
-    display: flex;   
-    transform: translateX(-100px); 
-    // animation: moveNews 2s forwards;   
-    
-    .image {
-        box-sizing: border-box;            
-        background: black;
-        min-width: 180px;
-        height: 180px;
-        margin: -2px;        
-    }
-    .text {       
-        width: 76%;   
-        padding: 10px 20px;
-        text-align: justify;
-        h5 {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #ec164c;
-        }
-        p {
-           max-height: 100px;
-           overflow: hidden;    
-           margin: 0;
-           display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;  
-            @include responsive($phones) { 
-                font-size: 15px;
-            }                     
-        }        
-        a {
-            display: flex;
-            align-items: center; 
-            justify-content: flex-end;
-            line-height: 25px;
-            margin: 5px 0;
-            font-size: 15px;
-            i {
-                margin: 2px 5px 0 5px;   
-            }
-            &:hover {
-                color: red;
-                text-decoration: none;
-            }
-        }    
-    }
-    @include responsive($phones) { 
-        margin: 5px 0;
-        width: 100%;            
-    }
-}
+}   
 .added {
     position: absolute;
     animation: downUpMotion .8s forwards !important;

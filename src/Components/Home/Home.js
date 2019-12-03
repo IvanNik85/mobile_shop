@@ -6,6 +6,7 @@ import MainClass from "../MainClass/MainClass"
 import Info from "../Info/Info"
 import Contact from "../Contact/Contact"
 import News from "../News/News"
+// import NewsMap from "../News/NewsMap"
 
 export default class Home extends React.Component {    
     state = {

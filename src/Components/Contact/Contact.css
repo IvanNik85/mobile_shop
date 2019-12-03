@@ -10,8 +10,8 @@
 }
 
 .contactInfo .wrap {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#051937), color-stop(#003561), color-stop(#2d6caf), color-stop(#2174cc), to(#0e2462));
-  background-image: linear-gradient(to left bottom, #051937, #003561, #2d6caf, #2174cc, #0e2462);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#051937), color-stop(#003561), color-stop(#380000), to(#670909));
+  background-image: linear-gradient(to left bottom, #051937, #003561, #380000, #670909);
   opacity: .8;
   width: 100%;
   height: 100%;

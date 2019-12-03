@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {storeProducts, detailProduct} from "./data"
+import {newNews, actualNews, popularNews, oldNews} from "./newsData"
 
 const Context = React.createContext();
 
@@ -12,7 +13,8 @@ class ProductProvider extends Component {
         modalProduct: detailProduct,
         cartSubtotal: 0,
         cartTax: 0,
-        cartTotal: 0
+        cartTotal: 0,
+        news: newNews
     }
     //set copy of products so storeProducts stay intacted
     setProducts = () => {
