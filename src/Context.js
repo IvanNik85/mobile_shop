@@ -14,7 +14,10 @@ class ProductProvider extends Component {
         cartSubtotal: 0,
         cartTax: 0,
         cartTotal: 0,
-        news: newNews
+        new: newNews,
+        actual: actualNews,
+        popular: popularNews,
+        old: oldNews
     }
     //set copy of products so storeProducts stay intacted
     setProducts = () => {
