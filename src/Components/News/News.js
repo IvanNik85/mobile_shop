@@ -2,7 +2,7 @@ import React from 'react'
 import "./News.scss"
 import { ProductConsumer } from "../../Context"
 import NewsCard from "./NewsCard"
-import {newNews} from "../../newsData"
+import { newNews } from "../../newsData"
 import NewsModal from "../../UI/NewsModal/NewsModal"
 
 export default class News extends React.Component {
@@ -48,35 +48,33 @@ export default class News extends React.Component {
         setTimeout(() => {
             element.classList.add('added');
         }, 50)
-    }    
+    }
     callbackFunction = (childData) => {
-        this.setState({newsData: childData})
+        this.setState({ newsData: childData })
     }
     modalOpenHandler = () => {
-        this.setState({ modalShow: true});       
-      };
-    
+        this.setState({ modalShow: true });
+    };
+
     modalClosedHandler = () => {
         this.setState({ modalShow: false });
-      };   
+    };
 
-    render() {           
+    render() {
         return (
             <ProductConsumer>
-                {value => {                                        
+                {value => {
                     return (
                         <div className="container-fluid" id="News" ref={this.myref1}>
                             <h1>News</h1>
                             <div className="row">
                                 <div className="col-md-9 col-lg-8 content">
-                                    <div className="row">
-                                        <div className="navMenu"></div>
-                                    </div>
-                                    <div className="row" style={this.state.div ? { animation: "moveNews 1.5s forwards" } : null}>
+                                    <div className="navMenu"></div>
+                                    <div className="row newsDiv" style={this.state.div ? { animation: "moveNews 1.5s forwards" } : null}>
                                         {this.state.clicked.map(item => {
-                                            return <NewsCard key={item.id} items={item} parrentCall={this.callbackFunction} modal={this.modalOpenHandler}/>
-                                        })}   
-                                    </div>                                  
+                                            return <NewsCard key={item.id} items={item} parrentCall={this.callbackFunction} modal={this.modalOpenHandler} />
+                                        })}
+                                    </div>
                                 </div>
                                 <div className="col-md-3 col-lg-4 circleDiv">
                                     <div className="outsideDiv">
@@ -93,7 +91,7 @@ export default class News extends React.Component {
                                                     }
                                                     style={this.state.click ? this.rotateCircle() : null}>
                                                     New
-                                        </span>
+                                                </span>
                                             </div>
                                             <div className={"circle" + (this.state.rotate ? ' rotateSmall' : " ")}>
                                                 <span
@@ -105,7 +103,7 @@ export default class News extends React.Component {
                                                     }
                                                     style={this.state.click ? this.rotateCircle() : null}>
                                                     Actual
-                                        </span>
+                                                </span>
                                             </div>
                                             <div className={"circle" + (this.state.rotate ? ' rotateSmall' : " ")}>
                                                 <span
@@ -117,7 +115,7 @@ export default class News extends React.Component {
                                                     }
                                                     style={this.state.click ? this.rotateCircle() : null}>
                                                     Older
-                                        </span>
+                                                </span>
                                             </div>
                                             <div className={"circle" + (this.state.rotate ? ' rotateSmall' : " ")}>
                                                 <span
@@ -129,17 +127,17 @@ export default class News extends React.Component {
                                                     }
                                                     style={this.state.click ? this.rotateCircle() : null}>
                                                     Popular
-                                        </span>
+                                                </span>
                                             </div>
                                         </div>
                                         <div className={"activeNews" + (this.state.arrow ? ' revealA' : " ")}></div>
                                     </div>
                                 </div>
                             </div>
-                            <NewsModal modalTrue={this.state.modalShow} data={this.state.newsData} modalClose={this.modalClosedHandler}/>
-                        </div>                        
+                            <NewsModal modalTrue={this.state.modalShow} data={this.state.newsData} modalClose={this.modalClosedHandler} />
+                        </div>
                     )
-                }}                
+                }}
             </ProductConsumer>
         )
     }

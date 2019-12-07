@@ -13,7 +13,7 @@ export const newNews = [
     },
     {
         id: 3,
-        title: "Realme X2 arrives in Avocado Green color, gets a slight discount in China",
+        title: "Realme X2 arrives in Avocado Green color",
         img: "images/News/Realme X2.jpg",
         text: "Realme has launched a new color of the Realme X2 called Avocado Green that looks absolutely stunning. The device is only available for purchase in China for now and comes with a decent discount for the first few days of the sale - CNY1,699 ($240) instead of CNY1,899 ($270).The new Realme X2 is the very same Snapdragon 730G-powered handset with 8 GB RAM and 128 GB storage, just with a new coat of paint on the back and a new default theme of the UI that is predominantly green.The reason Realme is launching a new color is to complement the Master Edition launch of the Realme X2 Pro. The Brick Red variant is now for pre-order on the company website, and the 12/256 GB variant comes with a slight CNY100 discount to make the end price CNY3,199 or about $455. Realme currently receives only deposits for the Brick Red Realme X2 Pro, with the final payments expected in ten days as the phone starts shipping on December 12."
     }
@@ -28,12 +28,12 @@ export const actualNews = [
     {
         id: 5,
         title: "Apple Pay Express Transit now works in London",
-        img: "images/News/apple1.jpg",
+        img: "images/News/apple.jpg",
         text: "After a few months of collaboration, the Apple Pay Express Transit feature now works for all Transport for London services, including the Underground, buses and trams – anywhere there is a yellow reader. Basically, if you have an iPhone or an Apple Watch, you can now leave your Oyster card behind.To start using the Express Transit feature, you just need to pick a preferred card to use for payments. The “express” part of the name means that the usual authentication is skipped to make it faster to use. Interestingly, this feature will continue working for up to five hours after your iPhone’s battery dies – however, this only applies to iPhone XS, XR and newer models. Also keep in mind that powering off the phone disables the Transit feature. Note that authentication is still required for regular Apple Pay transactions. And if you lose your phone or watch, you can disable the Express Transit feature remotely. Apple Pay Express Transit now works in London. This feature is available for the public transport services in several other regions, including New York (MTA), Portland (TriMet), Japan (Suica cards) as well as Beijing and Shanghai."
     },
     {
         id: 6,
-        title: "Facebook now allows you to export all your pictures to Google Photos",
+        title: "Facebook allows you to export all your pictures to Google Photos",
         img: "images/News/facebookPhotos.jpg",
         text: "In an attempt to get the so-called Data Transfer Project moving, Facebook is now making it easier for users to transfer all their pictures from their Facebook profile to Google Photos. This project is a collaboration between Apple, Google, Microsoft, Twitter and Facebook and the goal is to make it easier for you to transfer data between their ecosystems. Facebook now allows you to export all your pictures to Google Photos. As of now, Facebook says the open-source tool to transfer your photos is only available to some users in Ireland but will be introduced to the rest of the world in early 2020. Facebook also adds that the tool will work with other services and it's easy to guess which are on the top priority list - iCloud and OneDrive."
     }
@@ -47,7 +47,7 @@ export const popularNews = [
     },
     {
         id: 8,
-        title: "Samsung reveals Android 10 update roadmap for its devices in the Philippines",
+        title: "Samsung reveals Android 10 update roadmap",
         img: "images/News/asusPhilipines.jpg",
         text: "A few days ago Samsung revealed the Android 10 update roadmap for its devices in Israel and later followed it up by detailing the schedule for Indian and Chinese units. Now the company has revealed its plans for Android 10 rollout in the Philippines. The Korean tech giant will release Android 10 with One UI 2.0 for the Galaxy M20 and Galaxy S10 trio in January 2020, however, the company has already started seeding the update for the S10 series so it may reach Filipino units sooner than that. Samsung reveals Android 10 update roadmap for the Philippines. Later in February, Samsung will seed Android 10 for a total of seven devices, which include the Galaxy S9, S9+, Note9, Note10, Note10+, A30, and M30. There's no specific order to it but we may see the Note10 duo get a taste of Android 10 first."
     },

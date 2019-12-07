@@ -1,6 +1,9 @@
 $phones: 768px;
 $tablet: 996px;
 $laptop: 1140px;
+$smallres: 560px;
+$small: 515px;
+$small1: 420px;
 
 @mixin responsive($device) {
     @media (max-width: #{$device}) { 
@@ -14,22 +17,24 @@ $laptop: 1140px;
     margin: 2px 150px;
     border: 2px solid #a09f9f;   
     display: flex;   
-    transform: translateX(-100px); 
-    // animation: moveNews 2s forwards;   
-    
+    transform: translateX(-100px);     
     .image {
-        box-sizing: border-box;            
-        background: black;
-        min-width: 278px;
-        height: 180px;
-        margin: -2px;   
-        @include responsive($phones) { 
-            min-width: 278px;;
-            height: 120px;
+        box-sizing: border-box;  
+        min-width: 278px;  
+        margin: -2px;  
+        @include responsive($laptop) { 
+            min-width: 0px;            
+            height: auto;
         }     
         img {
-            width: 100%;
-            height: 180px;            
+            width: 100%;  
+            max-height: 180px;
+            height: 180px; 
+            width: 278px;             
+            @include responsive($laptop) { 
+                width: 100%;
+                height: auto;
+            }             
         }   
     }
     .text {       
@@ -37,9 +42,19 @@ $laptop: 1140px;
         padding: 10px 20px;
         text-align: justify;
         h5 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: bold;
             color: #ec164c;
+            text-align: left;
+            @include responsive($tablet) { 
+                font-size: 17px;
+            }  
+            @include responsive($small) { 
+                font-size: 16px;
+            }    
+            @include responsive($small1) { 
+                font-size: 15px;
+            }  
         }
         p {
            max-height: 100px;
@@ -48,11 +63,17 @@ $laptop: 1140px;
            font-size: 13px;
            display: -webkit-box;
             -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;  
+            -webkit-box-orient: vertical; 
+            @include responsive($laptop) {                 
+                -webkit-line-clamp: 3;
+            }       
             @include responsive($phones) { 
                 font-size: 15px;
                 -webkit-line-clamp: 2;
-            }                     
+            }      
+            @include responsive($small) { 
+                display: none;
+            }                                     
         }        
         a {
             display: flex;
