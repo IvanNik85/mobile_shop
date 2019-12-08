@@ -30,7 +30,8 @@ $small1: 420px;
             width: 100%;  
             max-height: 180px;
             height: 180px; 
-            width: 278px;             
+            width: 278px;      
+            padding: 2px;       
             @include responsive($laptop) { 
                 width: 100%;
                 height: auto;
@@ -72,7 +73,7 @@ $small1: 420px;
                 -webkit-line-clamp: 2;
             }      
             @include responsive($small) { 
-                display: none;
+                display: none;                
             }                                     
         }        
         a {
@@ -89,7 +90,10 @@ $small1: 420px;
                 color: red;
                 text-decoration: none;
             }
-        }    
+        }
+        @include responsive($small) { 
+            padding: 10px 15px;              
+        }       
     }
     @include responsive($phones) { 
         margin: 5px 100px;

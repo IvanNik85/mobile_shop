@@ -30,6 +30,7 @@
   max-height: 180px;
   height: 180px;
   width: 278px;
+  padding: 2px;
 }
 
 @media (max-width: 1140px) {
@@ -121,6 +122,12 @@
 .news .text a:hover {
   color: red;
   text-decoration: none;
+}
+
+@media (max-width: 515px) {
+  .news .text {
+    padding: 10px 15px;
+  }
 }
 
 @media (max-width: 768px) {

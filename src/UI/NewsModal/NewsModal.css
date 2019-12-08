@@ -1,4 +1,4 @@
-.newsModal {
+.modal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,29 +9,29 @@
       -ms-flex-align: center;
           align-items: center;
   background: rgba(0, 0, 0, 0.7);
-  position: relative;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100wh;
-  height: 100vh;
   z-index: 40 !important;
 }
 
-.newsModal .newsArea {
+.modal .newsArea {
   background: #fff;
-  width: 800px;
-  height: 800px;
+  height: 80%;
   z-index: 50;
-  margin: 50px auto;
+  margin: 45px auto 0px;
   -webkit-animation: modalShow .5s forwards;
           animation: modalShow .5s forwards;
   border-radius: 8px;
 }
 
-.newsModal .newsArea .closeNews {
+@media (max-width: 685px) {
+  .modal .newsArea {
+    width: 100vw;
+    height: calc(100vh - 65px);
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.modal .newsArea .closeNews {
   position: absolute;
   right: 15px;
   font-size: 20px;
@@ -39,15 +39,15 @@
   color: #d0100f;
 }
 
-.newsModal .newsArea h2 {
+.modal .newsArea h2 {
   padding: 15px;
 }
 
-.newsModal .newsArea img {
+.modal .newsArea img {
   padding-bottom: 30px;
 }
 
-.newsModal .newsArea p {
+.modal .newsArea p {
   text-align: justify;
   overflow-y: auto;
 }
