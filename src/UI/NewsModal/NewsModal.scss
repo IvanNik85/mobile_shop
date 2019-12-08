@@ -1,3 +1,11 @@
+$small: 480px;
+$medium: 768px;
+
+@mixin deviceSize($device) {
+    @media (max-width: #{$device}) {
+        @content;
+    }
+}
 .modal {
     display: flex;
     justify-content: center;
@@ -8,38 +16,53 @@
         position: relative;   
         height: calc(100vh - 50px);       
         z-index: 50;
-        margin: 25px auto 0px;  
-        animation: modalShow .5s forwards; 
-        border-radius: 8px;
+        margin: 25px auto 10px;  
+        animation: modalShow .5s forwards;        
         overflow-y: auto;
         ::-webkit-scrollbar {
             width: 5px;
           }
-        @media (max-width: 768px) {           
+        @include deviceSize($medium) {          
             height: 100vh;
             margin: 0px;
             position: relative;
             border-radius: 0px;
-            bottom: 0;
+            bottom: 0;            
         }     
+        @include deviceSize($small) {
+            padding: 25px !important;
+        }        
         .closeNews {
             position: absolute;
             right: 15px;
             font-size: 20px;
             cursor: pointer;    
-            color: #d0100f;        
+            color: #d0100f;      
+            @include deviceSize($small) {
+                right: 2px;
+                top: 2px;
+            }        
         }
         h2 {
-            padding: 15px;
+            padding: 20px 15px 15px;
+            @include deviceSize($small) {
+                font-size: 21px;
+            };
         }
         img {
             padding-bottom: 40px;
             padding-top: 10px;
+            @include deviceSize($small) {
+                width: 100%;
+            };
         }
         p {
             text-align: justify;
             overflow-y: auto;   
-            white-space: pre-wrap;        
+            white-space: pre-wrap; 
+            @include deviceSize($small) {
+                font-size: 13px;                
+            };       
         }
     }    
 }

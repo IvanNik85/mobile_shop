@@ -38,6 +38,10 @@ $laptop: 1140px;
         @include responsive($phones) {
             width: calc(100vw -15px);
         }
+        @media (width: 768px) {  
+           width: 100vw;
+           margin-left: 50px;
+        }
     }
     .outsideDiv {    
         position: relative;        
