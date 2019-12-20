@@ -13,7 +13,7 @@ $small: 400px;
     .contact {           
         display: flex;        
         align-items: center;
-        flex-flow: column wrap;  
+        flex-flow: column wrap;          
         color: #fff;
         .contactData,.phoneNum,.emaiInfo,.adressInfo {
            width: 360px;          
@@ -57,10 +57,11 @@ $small: 400px;
         }
         .text:focus, .mail:focus, .area:focus {
             border: 2px solid #0a6ec0;
+            outline: none;
             transition: .3s;            
         }
         input:focus::placeholder, .area:focus::placeholder{
-            color:transparent;
+            color:transparent;            
             transition: .3s; 
        }
         .text::placeholder, .mail::placeholder, .area::placeholder {

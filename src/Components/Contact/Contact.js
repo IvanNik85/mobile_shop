@@ -28,7 +28,7 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className="col-12 col-md-6 messageField">
-                            <form autocomplete="off" action="##">
+                            <form autoComplete="off" action="##">
                                 <div className="ddd">                                   
                                     <input type="text" name="name" className="text" placeholder="Name" /><br />
                                     <input type="email" name="email" className="mail" placeholder="E-mail" /><br />

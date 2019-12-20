@@ -19,10 +19,16 @@ export default function CartTotal({value}) {
                             <span>Total:</span> <span>{cartTotal}€</span>
                         </h3>
                     </div>
-                    <Link to="/Cart">
-                        <button className="btn red px-5 mt-3" type="button"
-                        onClick={() => clearCart()}>Clear cart</button>                       
-                    </Link>                   
+                   <div className="buyClear">
+                        <Link to="/Cart">
+                            <button className="btn red" type="button"
+                            onClick={() => clearCart()}>Clear cart</button>                       
+                        </Link>       
+                        <Link to="/">
+                            <button className="btn blue" type="button"
+                            onClick={() => clearCart()}>Buy</button>                       
+                        </Link>                
+                   </div>            
                 </div>
             </div>
         </div>
