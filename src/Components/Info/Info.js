@@ -3,7 +3,8 @@ import "./Info.scss"
 
 export default class Info extends React.Component {
     state = {
-        visible: false    
+        visible: false,
+        // cardCli: false   
     }
     myref = React.createRef();
     options = {
@@ -33,17 +34,21 @@ export default class Info extends React.Component {
             }, 500)            
         })        
     }
+    startAnim = () => {
+        let fullCard = {animation: `fullAnim 1.4s forwards`} 
+        return (this.state.cardCli ? fullCard: null)
+    }
     render() {                
         return (
             <div className="wrapDiv" id="Info">
                 <h1>Information</h1>
                 <div className="container cardCont">
-                    <div className="infoCard" ref={this.myref}>
+                    <div className="infoCard" style={this.startAnim()} ref={this.myref}> 
                         <div className="nova" style = {this.animMethod("0s")}></div>
                         <div>
                             <h3>Card 01</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus porro, obcaecati, voluptate impedit itaque blanditiis nihil id magnam tenetur labore, velit tempore temporibus? Recusandae fugit voluptates voluptatibus cumque rem odit?</p>
-                            <a href="##">Click here</a>
+                            <a href="##" onClick={() => this.setState({cardCli: true})}>Click here</a>
                         </div>
                     </div>
                     <div className="infoCard">

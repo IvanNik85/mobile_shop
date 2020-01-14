@@ -44,8 +44,7 @@ export default class Home extends React.Component {
     }
 
     render() {
-        const styleIt = { animation: 'show 2s ease forwards' }
-        console.log(this.state.im)
+        const styleIt = { animation: 'show 2s ease forwards' }       
         return (
             <div>
                 <MainClass />
