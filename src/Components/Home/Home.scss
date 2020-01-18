@@ -169,10 +169,11 @@
     position: relative;
     top: 140px;
     display: flex;
-    align-items: center;    
+    align-items: center; 
+    padding-left: 50px;   
     .rec {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         border: 1px solid rgb(158, 157, 157);
         transform: translate(0px, 0px) rotate(45deg);
         display: flex;
@@ -182,31 +183,30 @@
     }
     .firstImg {
         position: relative;
-        top: 213px;
-        left: 87px;
-        z-index: 1;
-        
+        top: 70%;
+        left: 10%;
+        z-index: 1;        
     }    
     .secondImg {    
         z-index: 2;        
     }
     .thirdImg {
         position: relative;
-        top: 213px;
-        right: 87px;   
+        top: 70%;
+        right: 10%;   
     }
     img {
         width: 60%;
         height: 60%;
         transform: rotate(-45deg);
     }
-    &:hover .thirdImg{
+    .thirAnim{
         animation: translateDiv 1.5s forwards;
     }
-    &:hover .firstImg{
+    .firAnim{
         animation: translateOne 1.5s forwards;
     }
-    &:hover .secondImg{
+    .secAnim{
         animation: translateCentral 1.5s forwards;
     }
 }
@@ -237,7 +237,7 @@
         transform: translate(0px, 0px) rotate(45deg);
     }
     100% {        
-        transform: translate(0px, 426px) rotate(45deg);
+        transform: translate(0px, 140%) rotate(45deg);
     }
 }
 @media (max-width: 1320px) {

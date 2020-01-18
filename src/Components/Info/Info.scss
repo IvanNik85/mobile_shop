@@ -128,17 +128,4 @@
         color: #777;
     }
 }
-@keyframes fullAnim {
-    0% {   
-        width: 320px;      
-        padding: 40px;  
-    }
-    100% {       
-        position: absolute;        
-        width: calc(100vw - 15px);
-        height: 100vh;  
-        margin: 0;        
-        background-color: #ec164c;
-        z-index: 12;
-    }
-}
+

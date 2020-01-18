@@ -21,10 +21,7 @@ export default class Home extends React.Component {
         } else {
             return { rootMargin: "-150px 0px" }
         }
-    }
-    // options = {
-    //     rootMargin: "-300px"
-    // }
+    }   
     observer = new IntersectionObserver(entries => {
         if (entries[0].intersectionRatio > 0) {
             this.setState({ visible: true });
@@ -45,6 +42,7 @@ export default class Home extends React.Component {
 
     render() {
         const styleIt = { animation: 'show 2s ease forwards' }       
+        console.log(images)
         return (
             <div>
                 <MainClass />
@@ -53,9 +51,15 @@ export default class Home extends React.Component {
                     <div className="row">
                         {/* <img src={mainImage} className="img-fluid mainImg" alt="mainImage"/> */}
                         <div className="animImages">
-                            <div className="rec firstImg"><img src={this.state.im[0]} alt="phoneOne" /></div>
-                            <div className="rec secondImg"><img src={this.state.im[1]} alt="phoneTwo" /></div>
-                            <div className="rec thirdImg"><img src={this.state.im[2]} alt="phoneThree" /></div>
+                            <div className={`rec firstImg ${this.state.visible?"firAnim" : ''}`} >
+                                <img src={this.state.im[0]} alt="phoneOne" />
+                                </div>
+                            <div className={`rec secondImg ${this.state.visible?"secAnim" : ''}`}>
+                                <img src={this.state.im[1]} alt="phoneTwo" />
+                                </div>
+                            <div className={`rec thirdImg ${this.state.visible?"thirAnim" : ''}`}>
+                                <img src={this.state.im[2]} alt="phoneThree" />
+                                </div>
                         </div>
                         <div className="mainButtons" style={this.state.visible ? styleIt : null}>
                             <div className="pulse">
