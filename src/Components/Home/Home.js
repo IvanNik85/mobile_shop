@@ -7,11 +7,13 @@ import Info from "../Info/Info"
 import Contact from "../Contact/Contact"
 import News from "../News/News"
 import images from "../../Images"
+import ScrollTop from '../../UI/ScrollTop/ScrollTop'
 // import NewsMap from "../News/NewsMap"
 
 export default class Home extends React.Component {
     state = {
         visible: false,
+        is_visible: false,
         im: []
     }
     myref = React.createRef();
@@ -32,7 +34,7 @@ export default class Home extends React.Component {
    
     componentDidMount() {
         this.observer.observe(this.myref.current)   
-        this.imagesMap()     
+        this.imagesMap() 
     }    
 
     imagesMap() {
@@ -79,6 +81,7 @@ export default class Home extends React.Component {
                 </div>
                 <News />
                 <Contact />
+                <ScrollTop />            
             </div>
         )
     }
