@@ -34,6 +34,10 @@ html {
   display: none;
 }
 
+#Main .carousel-item {
+  width: calc(100vw - 15px);
+}
+
 #Main .mainText {
   position: absolute;
   width: 0px;

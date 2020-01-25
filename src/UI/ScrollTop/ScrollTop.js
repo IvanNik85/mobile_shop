@@ -13,8 +13,7 @@ export default class ScrollTop extends Component {
     }
 
     toggleVisibility() {
-        if (window.pageYOffset > (document.documentElement.offsetHeight / 2)
-        ) {
+        if (window.pageYOffset > (document.documentElement.offsetHeight / 2)) {
             this.setState({
                 is_visible: true
             });
@@ -31,11 +30,11 @@ export default class ScrollTop extends Component {
         })
     }
 
-    render() {
+    render() { 
         return (
             <div className="scrollTop">
                 {this.state.is_visible && (
-                    <button type="button" onClick={() => this.scrollToTop()}>
+                    <button className="toTopBtn" type="button" onClick={() => this.scrollToTop()}>
                         <i class="fas fa-angle-double-up"></i>
                     </button>
                 )}

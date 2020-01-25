@@ -1,0 +1,26 @@
+.scrollTop {
+  position: relative;
+}
+
+.scrollTop .toTopBtn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background: #cc1036c7;
+  border: 2px solid #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.scrollTop .toTopBtn:hover {
+  background: #cc1036;
+}
+
+.scrollTop .toTopBtn:hover i {
+  font-size: large;
+}
+/*# sourceMappingURL=ScrollTop.css.map */

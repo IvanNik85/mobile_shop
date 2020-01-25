@@ -12,8 +12,7 @@ import ScrollTop from '../../UI/ScrollTop/ScrollTop'
 
 export default class Home extends React.Component {
     state = {
-        visible: false,
-        is_visible: false,
+        visible: false,        
         im: []
     }
     myref = React.createRef();

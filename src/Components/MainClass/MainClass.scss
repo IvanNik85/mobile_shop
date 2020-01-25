@@ -14,11 +14,14 @@ $phone: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     .carousel-indicators {
         display: none;
     }
-
+    .carousel-item {
+        width: calc(100vw - 15px);
+    }
+   
     .mainText {
         position: absolute;
         width: 0px;

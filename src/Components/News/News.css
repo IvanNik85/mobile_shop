@@ -47,6 +47,13 @@
   }
 }
 
+@media (width: 768px) {
+  #News .newsDiv {
+    width: 100vw;
+    margin-left: 50px;
+  }
+}
+
 #News .outsideDiv {
   position: relative;
 }

@@ -3,9 +3,10 @@ import "./Info.scss"
 
 export default class Info extends React.Component {
     state = {
-        visible: false          
+        visible: false, 
+        hoverEnabled: false          
     }
-    myref = React.createRef();
+    myref = React.createRef();    
     options = {
         rootMargin: "-40px 0px"
     }
@@ -20,8 +21,13 @@ export default class Info extends React.Component {
         this.observer.observe(this.myref.current)  
     }     
     animMethod = (delay) => {
-        let clearDiv = {animation: `fillDown 1.4s ${delay} ease forwards`}
-        return (this.state.visible ? clearDiv : null )
+        const clearDiv = {animation: `fillDown 1.4s ${delay} ease forwards`}   
+        if(this.state.visible) {
+            setTimeout(() => {
+                this.setState({hoverEnabled: true})
+            }, 2000)     
+            return clearDiv;
+        }        
     }
     textColor = () => {
         let divs = document.querySelectorAll(".infoCard h3,.infoCard p")
@@ -39,7 +45,7 @@ export default class Info extends React.Component {
                 <h1>Information</h1>
                 <div className="container cardCont">
                     <div className="infoCard" ref={this.myref}> 
-                        <div className="nova" style = {this.animMethod("0s")}></div>
+                        <div className={`nova ${this.state.hoverEnabled && "enabled"}`} style = {this.animMethod("0s")}></div>
                         <div>
                             <h3>Card 01</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus porro, obcaecati, voluptate impedit itaque blanditiis nihil id magnam tenetur labore, velit tempore temporibus? Recusandae fugit voluptates voluptatibus cumque rem odit?</p>
@@ -47,7 +53,8 @@ export default class Info extends React.Component {
                         </div>
                     </div>
                     <div className="infoCard">
-                        <div className="nova" style = {this.animMethod(".3s")}></div>
+                        <div 
+                            className={`nova ${this.state.hoverEnabled && "enabled"}`} style = {this.animMethod(".3s")}></div>
                         <div>
                             <h3>Card 02</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus porro, obcaecati, voluptate impedit itaque blanditiis nihil id magnam tenetur labore, velit tempore temporibus? Recusandae fugit voluptates voluptatibus cumque rem odit?</p>
@@ -55,7 +62,7 @@ export default class Info extends React.Component {
                         </div>
                     </div>
                     <div className="infoCard">
-                        <div className="nova" style = {this.animMethod(".6s")}></div>
+                        <div className={`nova ${this.state.hoverEnabled && "enabled"}`} style = {this.animMethod(".6s")}></div>
                         <div>
                             <h3>Card 03</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus porro, obcaecati, voluptate impedit itaque blanditiis nihil id magnam tenetur labore, velit tempore temporibus? Recusandae fugit voluptates voluptatibus cumque rem odit?</p>

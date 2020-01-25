@@ -43,7 +43,7 @@
         z-index: 1;
         transition: all 0.5s ease-in-out; 
     }
-    &:hover .nova {
+    &:hover .enabled {
         transform: translateY(calc(-100% + 4px)); 
     }   
     &:nth-child(1) > .nova {
@@ -54,7 +54,11 @@
     }
     &:nth-child(3) > .nova {
         background: #ff4500;       
-    }        
+    }    
+    &:hover .enabled~div h3, &:hover .enabled~div p {
+        color: #fff !important;
+        transition: color .7s;
+    }    
     div {
         position: relative;
         z-index: 2;
@@ -91,11 +95,7 @@
         padding: 6px 9px;
         font-weight: 600;
         border-radius: 5px;
-    }
-    &:hover h3, &:hover p {
-        color: #fff !important;
-        transition: color .7s;
-    }
+    }   
     @media (max-width: 400px) {
         width: 100%;
         padding: 30px;

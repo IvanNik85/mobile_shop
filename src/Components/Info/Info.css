@@ -72,7 +72,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.infoCard:hover .nova {
+.infoCard:hover .enabled {
   -webkit-transform: translateY(calc(-100% + 4px));
           transform: translateY(calc(-100% + 4px));
 }
@@ -87,6 +87,12 @@
 
 .infoCard:nth-child(3) > .nova {
   background: #ff4500;
+}
+
+.infoCard:hover .enabled ~ div h3, .infoCard:hover .enabled ~ div p {
+  color: #fff !important;
+  -webkit-transition: color .7s;
+  transition: color .7s;
 }
 
 .infoCard div {
@@ -138,12 +144,6 @@
   padding: 6px 9px;
   font-weight: 600;
   border-radius: 5px;
-}
-
-.infoCard:hover h3, .infoCard:hover p {
-  color: #fff !important;
-  -webkit-transition: color .7s;
-  transition: color .7s;
 }
 
 @media (max-width: 400px) {

@@ -1,26 +1,183 @@
 .contactInfo {
   background: #f2f2f2;
-  height: 100vh;
+  min-height: 100vh;
   background: url("../../images/cityPhone.jpg") no-repeat center;
   background-size: cover;
 }
 
-.contactInfo h1 {
+.contactInfo .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   color: #fff;
 }
 
+.contactInfo .contact .contactData, .contactInfo .contact .phoneNum, .contactInfo .contact .emaiInfo, .contactInfo .contact .adressInfo {
+  width: 360px;
+}
+
+@media (max-width: 400px) {
+  .contactInfo .contact .contactData, .contactInfo .contact .phoneNum, .contactInfo .contact .emaiInfo, .contactInfo .contact .adressInfo {
+    width: 100%;
+    padding-left: 7px;
+  }
+}
+
+.contactInfo .contact .contactData h3, .contactInfo .contact .phoneNum h3, .contactInfo .contact .emaiInfo h3, .contactInfo .contact .adressInfo h3 {
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+
+.contactInfo .contact .contactData p, .contactInfo .contact .phoneNum p, .contactInfo .contact .emaiInfo p, .contactInfo .contact .adressInfo p {
+  margin: 0;
+}
+
+.contactInfo .messageField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.contactInfo .messageField form {
+  margin-top: 40px;
+  margin-left: -42px;
+}
+
+@media (max-width: 400px) {
+  .contactInfo .messageField form {
+    margin-left: 0;
+  }
+}
+
+.contactInfo .messageField .ddd {
+  width: 320px;
+}
+
+@media (max-width: 400px) {
+  .contactInfo .messageField .ddd {
+    width: 100%;
+  }
+}
+
+.contactInfo .messageField .text, .contactInfo .messageField .mail, .contactInfo .messageField .area {
+  width: 100%;
+  padding: 8px 5px;
+  margin-bottom: 15px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.contactInfo .messageField .text:focus, .contactInfo .messageField .mail:focus, .contactInfo .messageField .area:focus {
+  border: 2px solid #0a6ec0;
+  outline: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contactInfo .messageField input:focus::-webkit-input-placeholder, .contactInfo .messageField .area:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contactInfo .messageField input:focus:-ms-input-placeholder, .contactInfo .messageField .area:focus:-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contactInfo .messageField input:focus::-ms-input-placeholder, .contactInfo .messageField .area:focus::-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contactInfo .messageField input:focus::placeholder, .contactInfo .messageField .area:focus::placeholder {
+  color: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contactInfo .messageField .text::-webkit-input-placeholder, .contactInfo .messageField .mail::-webkit-input-placeholder, .contactInfo .messageField .area::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.contactInfo .messageField .text:-ms-input-placeholder, .contactInfo .messageField .mail:-ms-input-placeholder, .contactInfo .messageField .area:-ms-input-placeholder {
+  color: #fff;
+}
+
+.contactInfo .messageField .text::-ms-input-placeholder, .contactInfo .messageField .mail::-ms-input-placeholder, .contactInfo .messageField .area::-ms-input-placeholder {
+  color: #fff;
+}
+
+.contactInfo .messageField .text::placeholder, .contactInfo .messageField .mail::placeholder, .contactInfo .messageField .area::placeholder {
+  color: #fff;
+}
+
+.contactInfo .messageField .submitBtn {
+  width: 140px;
+  height: 40px;
+  font-size: 17px;
+  font-size: 18px;
+  background: transparent;
+  border: 3px solid #c40d0d;
+  color: #fff;
+}
+
+.contactInfo .messageField .submitBtn:hover {
+  border: 3px solid #c40d0d;
+  background: #c40d0d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contactInfo h1 {
+  color: #fff;
+  padding: 60px 10px 90px 10px;
+}
+
 .contactInfo .wrap {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#051937), color-stop(#003561), color-stop(#380000), to(#670909));
-  background-image: linear-gradient(to left bottom, #051937, #003561, #380000, #670909);
+  position: relative;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#051937), color-stop(#003561), color-stop(#2b0505), to(#350808));
+  background-image: linear-gradient(to left bottom, #051937, #003561, #2b0505, #350808);
   opacity: .8;
   width: 100%;
-  height: 100%;
-  padding: 60px;
+  min-height: 100vh;
+  padding-bottom: 70px;
 }
 
 @media (max-width: 400px) {
   .contactInfo h1 {
     font-size: 35px;
   }
+}
+
+.footer p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  color: #2b8dff;
 }
 /*# sourceMappingURL=Contact.css.map */
