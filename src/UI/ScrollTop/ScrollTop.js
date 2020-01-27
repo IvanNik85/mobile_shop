@@ -35,7 +35,7 @@ export default class ScrollTop extends Component {
             <div className="scrollTop">
                 {this.state.is_visible && (
                     <button className="toTopBtn" type="button" onClick={() => this.scrollToTop()}>
-                        <i class="fas fa-angle-double-up"></i>
+                        <i className="fas fa-angle-double-up"></i>
                     </button>
                 )}
             </div>

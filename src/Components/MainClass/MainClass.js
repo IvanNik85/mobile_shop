@@ -18,39 +18,41 @@ export default class MainClass extends React.Component {
     render() {        
         let an = {animation: "disapearCircle 3s forwards"}
         return (
-            <div id="Main">              
-               <div className={this.state.isLoading? "none" : "mainText"} 
-                    onClick = {() => this.setState({anim: true})} 
-                    style = {this.state.anim ? an : null} >
-                    <h1>Welcome</h1>
-                    <span>to</span>
-                    <h2><span>ICA</span> mobile shop</h2>  
-               </div>       
-                <Carousel>                
-                    <Carousel.Item>
-                        <img   
-                            onLoad={() => this.handleImageLoaded()}                         
-                            className="d-block w-100"
-                            src={images}
-                            alt="First slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={images1}
-                            alt="Second slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={images2}
-                            alt="Third slide"
-                        />
-                    </Carousel.Item>
-                </Carousel>       
-            </div>        
+            <div className="container-fluid">
+                <div className="row" id="Main">              
+                   <div className={this.state.isLoading? "none" : "mainText"} 
+                        onClick = {() => this.setState({anim: true})} 
+                        style = {this.state.anim ? an : null} >
+                        <h1>Welcome</h1>
+                        <span>to</span>
+                        <h2><span>ICA</span> mobile shop</h2>  
+                   </div>       
+                    <Carousel>                
+                        <Carousel.Item>
+                            <img   
+                                onLoad={() => this.handleImageLoaded()}                         
+                                className="d-block w-100"
+                                src={images}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={images1}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={images2}
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>       
+                </div>     
+            </div>   
         )
     }   
     
