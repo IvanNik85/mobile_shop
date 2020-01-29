@@ -16,4 +16,4 @@ Clicking on the image user can see more details about the product and add it to 
 Also cart icon opens the modal and sends the product to the cart.<br>
 On cart page it is possible to chose the desired quantity of selected products, remove them from cart and eventually buy the product.<br>
 
-Tehnologies used: ReactJS, JavaScript, SASS, HTML5
+Tehnologies used: ReactJS, JavaScript, Bootstrap 4, SASS, HTML5

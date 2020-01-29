@@ -38,12 +38,21 @@ export default class Home extends React.Component {
 
     imagesMap() {
         const sources = images.map(img => img.src)
-        this.setState({im: sources})
+        let arr = [];
+        do {
+            const num = Math.floor(Math.random() * 12)
+            arr.push(num)
+            arr = arr.filter((item, index) => {
+                return arr.indexOf(item) === index
+            })
+        } while(arr.length < 3)
+        const randThree = arr.map(item => sources[item])
+        this.setState({im: randThree})
     }
 
     render() {
         const styleIt = { animation: 'show 2s ease forwards' }       
-        console.log(images)
+        console.log(this.state.im)
         return (
             <div>
                 <MainClass />
