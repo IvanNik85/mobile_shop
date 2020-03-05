@@ -1,12 +1,23 @@
 import React, { Component } from 'react'
-import { ProductConsumer } from "../../Context"
+import { ProductConsumer} from "../../Context"
 import { Link } from "react-router-dom"
 import "./Details.scss"
 import Button from "../Button/Button"
 import Carousel from 'react-bootstrap/Carousel'
+import Product from '../Product/Product'
 
 export default class Details extends Component {
-    render() {
+    state = {
+        image: []
+    }
+    componentDidMount() { 
+        console.log(MapElement())
+        let smallImg = document.querySelectorAll(`.imageSlider ol.carousel-indicators li`);
+        Array.from(smallImg).map((img,i) => {
+            img.style.background = `url("../../${MapElement()[i]}") no-repeat center`
+        })
+    }
+    render() {         
         return (
             <ProductConsumer>
                 {value => {
@@ -14,20 +25,26 @@ export default class Details extends Component {
                         id,
                         title,
                         img,
+                        additional_img,
                         price,
                         description,
                         inCart
-                    } = value.detailProduct;
-                    return (
+                    } = value.detailProduct;                     
+                    MapElement = () => {   
+                        let array = [];                       
+                        array = [img, ...additional_img];                     
+                        return array;
+                    }                
+                    return (                        
                         <div className="container">
                             <div className="row">
                                 <div className="col-10 mx-auto m-5"><h1>{title}</h1></div>
-                            </div>
-                            <div className="row">
-                                <div className="col-10 col-md-6 mx-auto pt-4 imageSlider">
+                            </div>                            
+                            <div className="row">                                
+                                <div className="col-10 col-md-6 mx-auto pt-4 imageSlider">                                    
                                     <Carousel>                                                                      
                                         <Carousel.Item>                                        
-                                            <img
+                                            <img 
                                                 className="d-block w-100"
                                                 src={img}
                                                 alt="First slide"
@@ -36,14 +53,14 @@ export default class Details extends Component {
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100"
-                                                src={img}
+                                                src={MapElement()[1]}
                                                 alt="Second slide"
                                             />                                            
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block w-100"
-                                                src={img}
+                                                src={MapElement()[2]}
                                                 alt="Third slide"
                                             />                                            
                                         </Carousel.Item>
@@ -78,3 +95,10 @@ export default class Details extends Component {
         )
     }
 }
+let MapElement = () => (
+    <ProductConsumer>
+      {val =>
+        <Details context={val.detailProduct} />
+      }
+    </ProductConsumer>
+  )

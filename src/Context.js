@@ -70,12 +70,7 @@ class ProductProvider extends Component {
         })
     }
 
-    // incMethod = () {
-
-    // }
-
-    increment = (id) => {
-        // this.incMethod();
+    increment = (id) => {        
         let tempCart = [...this.state.cart];
         let selected = tempCart.find(item => item.id === id);
 

@@ -75,12 +75,12 @@ h1 {
   margin-left: 3px;
   text-indent: 0;
   cursor: pointer;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
   border: 1px solid black;
   -webkit-transition: opacity .6s ease;
   transition: opacity .6s ease;
   background: url("../../images/mainImage.jpg") no-repeat center;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .imageSlider .carousel-control-next-icon {

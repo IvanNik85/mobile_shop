@@ -15,12 +15,11 @@ h1 {
             margin-left: 3px;
             text-indent: 0;
             cursor: pointer;
-            background-color: #fff;           
-            border: 1px solid black;           
-            // opacity: .5;
+            background-color: rgba(0,0,0,.6);           
+            border: 1px solid black; 
             transition: opacity .6s ease;
             background: url("../../images/mainImage.jpg") no-repeat center;
-            background-size: cover;
+            background-size: cover !important;
         }
     }
     .carousel-control-next-icon {

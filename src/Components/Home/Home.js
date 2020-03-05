@@ -8,7 +8,6 @@ import Contact from "../Contact/Contact"
 import News from "../News/News"
 import images from "../../Images"
 import ScrollTop from '../../UI/ScrollTop/ScrollTop'
-// import NewsMap from "../News/NewsMap"
 
 export default class Home extends React.Component {
     state = {
@@ -51,8 +50,7 @@ export default class Home extends React.Component {
     }
 
     render() {
-        const styleIt = { animation: 'show 2s ease forwards' }       
-        console.log(this.state.im)
+        const styleIt = { animation: 'show 2s ease forwards' }   
         return (
             <div>
                 <MainClass />
