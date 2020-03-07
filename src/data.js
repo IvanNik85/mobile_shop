@@ -30,7 +30,7 @@ export const storeProducts = [
         id: 2,
         title: "Huawei P30 lite",
         img: "images/huawei_p30lite.png",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/huawei-p30-lite-1.jpg", "images/additional_img/huawei-p30-lite-2.jpg"],
         price: 261.99,
         description: 
                 `Huawei P30 lite comes with a 6.15-inch touchscreen display with a resolution of 1080 pixels by  2312 pixels.The Huawei P30 lite is powered by HiSilicon Kirin 710 processor and it comes with 6GB of RAM. The phone packs 128GB of internal storage that can be expanded up to 512GB via a microSD card. As far as the cameras are concerned, the P30 lite packs a 24 + 8 +2 megapixel primary camera on the rear and a 32-megapixel front shooter for selfies.
@@ -44,7 +44,7 @@ export const storeProducts = [
         id: 3,
         title: "Nokia 8.1",
         img: "images/Nokia-8.1.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/Nokia-81-1.jpg", "images/additional_img/Nokia-81-2.jpg"],
         price: 299.99,
         description: 
             `Gorgeous selfies, day or night
@@ -67,7 +67,7 @@ export const storeProducts = [
         id: 4,
         title: "Apple iPhone XS 512GB Dual sim",
         img: "images/IPhone-XS.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/Apple_iPhone_XS_1.jpg", "images/additional_img/Apple_iPhone_XS_2.jpg"],
         price: 1291.99,
         description: 
             `Super Retina. In big and bigger. The custom OLED displays on iPhone XS deliver the most accurate color in the industry, HDR, and true blacks. Exceptional materials. The most durable glass ever in a smartphone. A beautiful new gold finish, achieved with an atomic-level process. Precision-machined, surgical-grade stainless steel bands. And a new level of water and dust resistance. Advanced Face ID. Security is simple when your face is your password. You can unlock your iPhone, log in to apps, and pay for things with a glance. It’s the most secure facial authentication ever in a smartphone. And now it’s even faster. Intelligent A12 Bionic. This is the smartest, most powerful chip in a smartphone, with our next-generation Neural Engine. For amazing augmented reality experiences. Incredible portraits with Depth Control. And speed and fluidity in everything you do. Breakthrough dual-camera system. The world’s most popular camera is defining a new era of photography. Where an innovative sensor works with the ISP and Neural Engine to help you create photos like never before.`,
@@ -79,7 +79,7 @@ export const storeProducts = [
         id: 5,
         title: "Samsung Galaxy A50",
         img: "images/samsung-galaxy-a50.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/Samsung_Galaxy_A50_1.jpg", "images/additional_img/Samsung_Galaxy_A50_2.jpg"],
         price: 272.99,
         description: 
             `Samsung Galaxy A50 comes with a 6.4-inch touchscreen display with a resolution of 1080 pixels by  2340 pixels.Samsung Galaxy A50 is powered by Octa-core processor and it comes with 6GB of RAM. The phone packs 128GB of internal storage that can be expanded up to 512GB via a microSD card. As far as the cameras are concerned, the A50 packs a 25+8+5 megapixel primary camera on the rear and a 25-megapixel front shooter for selfies.
@@ -93,7 +93,7 @@ export const storeProducts = [
         id: 6,
         title: "LG G6",
         img: "images/lg-g6.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/LG-G6-1.jpg", "images/additional_img/LG-G6-2.jpg"],
         price: 316.99,
         description: 
             `FullVision display with narrow bezel in premium metal and glass body elevates LG G6 into the next generation of smartphone design.
@@ -129,7 +129,7 @@ export const storeProducts = [
         id: 7,
         title: "Huawei Honor View 20",
         img: "images/huawei_honor_View_20.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/huawei-honor-view-20-1.jpg", "images/additional_img/huawei-honor-view-20-2.jpg"],
         price: 402.99,
         description: 
             `Huawei Honor View 20 comes with a 6.4-inch touchscreen display with a resolution of 1080 pixels by  2310 pixels.The Honor View 20 is powered by HiSilicon Kirin 980 processor and it comes with 6GB of RAM. The phone packs 128GB of internal storage. As far as the cameras are concerned, the Honor View 20 packs a 48 megapixel primary camera on the rear and a 25-megapixel front shooter for selfies.
@@ -143,7 +143,7 @@ export const storeProducts = [
         id: 8,
         title: "Xiaomi Mi 9 6GB/128GB Dual Sim",
         img: "images/xiaomi-mi-9-6gb-128gb-dual.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/Xiaomi-Mi-9-1.jpg", "images/additional_img/Xiaomi-Mi-9-2.jpg"],
         price: 379,
         description: 
             `Xiaomi Mi 9
@@ -169,7 +169,7 @@ export const storeProducts = [
         id: 9,
         title: "Samsung Galaxy S10+",
         img: "images/samsung-galaxy-s10+.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/samsung_s10_black_1.jpg", "images/additional_img/samsung_s10_black_2.jpg"],
         price: 784.99,
         description: 
             `Samsung Galaxy S10+
@@ -203,7 +203,7 @@ export const storeProducts = [
         id: 10,
         title: "Huawei P30 8GB/128GB Dual sim",
         img: "images/huawei_p30.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/Huawei-P30-1.jpg", "images/additional_img/Huawei-P30-2.jpg"],
         price: 561.99,
         description: 
             `Brighter, wider and closer. See the world from new perspectives. Discover the unseen surprises and turn them into your treasured memories. The HUAWEI P30 is pushing the envelope of smartphone photography.
@@ -227,7 +227,7 @@ export const storeProducts = [
         id: 11,
         title: "Sony Xperia XZ3",
         img: "images/Sony_Xperia_XZ3.png",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/Sony-Xperia-XZ3-1.jpg", "images/additional_img/Sony-Xperia-XZ3-2.jpg"],
         price: 529.99,
         description: 
             `Xperia XZ3
@@ -252,7 +252,7 @@ export const storeProducts = [
         id: 12,
         title: "LG V40 ThinQ",
         img: "images/LG_V40_ThinQ.jpg",
-        additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
+        additional_img: ["images/additional_img/LG-V40-ThinQ-1.jpg", "images/additional_img/LG-V40-ThinQ-2.jpg"],
         price: 469.99,
         description: 
             `So Bright. So Light.
