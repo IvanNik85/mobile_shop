@@ -57,7 +57,7 @@ export default class Home extends React.Component {
                 <Info />
                 <div className="container-fluid Home" id="Home" ref={this.myref}>
                     <div className="row">
-                        {/* <img src={mainImage} className="img-fluid mainImg" alt="mainImage"/> */}
+                        {/* <img src={mainImage} className="img-fluid mainImg" alt="mainImage"/> */}                           
                         <div className="animImages">
                             <div className={`rec firstImg ${this.state.visible?"firAnim" : ''}`} >
                                 <img src={this.state.im[0]} alt="phoneOne" />
@@ -82,7 +82,7 @@ export default class Home extends React.Component {
                                     <div className="backPulse"></div>
                                 </Link>
                             </div>
-                        </div>
+                        </div>                      
                     </div>
                 </div>
                 <News />

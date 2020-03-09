@@ -1,86 +1,10 @@
 @import "../../index.scss";
-.Home {
+.Home {    
     position: relative;  
     min-height: 600px;  
     height: 100vh; 
     background: url("../../images/mainImage3.jpg") no-repeat center;
-    background-size: cover;
-    .divs {
-        position: relative;
-        top: 200px;
-        display: flex;
-        align-items: center;
-    }
-    .divs:hover .third{
-        animation: translateDiv 1.5s forwards;
-    }
-    .divs:hover .first{
-        animation: translateOne 1.5s forwards;
-    }
-    .divs:hover .second{
-        animation: translateCentral 1.5s forwards;
-    }
-    .rec {
-        width: 300px;
-        height: 300px;
-        border: 1px solid rgb(158, 157, 157);
-        transform: translate(0px, 0px) rotate(45deg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-    }
-    .first {
-        position: relative;
-        top: 215px;
-        left: 89px;
-        z-index: 1;
-        
-    }    
-    .second {    
-        z-index: 2;        
-    }
-    .third {
-        position: relative;
-        top: 215px;
-        right: 89px;   
-    }
-    img {
-        width: 60%;
-        height: 60%;
-        transform: rotate(-45deg);
-    }
-    @keyframes translateDiv {
-        0% {
-            transform: translate(0px, 0px) rotate(45deg);
-        }
-        50% {
-            transform: translate(-110px, 110px) rotate(45deg);
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(45deg);
-        }
-    }
-    @keyframes translateOne {
-        0% {
-            transform: translate(0px, 0px) rotate(45deg);
-        }
-        50% {
-            transform: translate(110px, 110px) rotate(45deg);
-        }
-        100% {
-            transform: translate(0px, 0px) rotate(45deg);
-        }
-    }
-    @keyframes translateCentral {
-        0% {
-            transform: translate(0px, 0px) rotate(45deg);
-        }
-        100% {        
-            transform: translate(0px, 430px) rotate(45deg);
-        }
-    }
-
+    background-size: cover;    
     .mainButtons {
         position: absolute;
         transform: translate(-50%, -50%);

@@ -54,8 +54,8 @@
   width: 320px;
   padding: 40px;
   text-align: justify;
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   margin: 15px;
   overflow: hidden;
 }
@@ -78,11 +78,11 @@
 }
 
 .infoCard:nth-child(1) > .nova {
-  background: #ec164c;
+  background: #ed174d;
 }
 
 .infoCard:nth-child(2) > .nova {
-  background: #2196f3;
+  background: #017bc3;
 }
 
 .infoCard:nth-child(3) > .nova {
@@ -95,55 +95,110 @@
   transition: color .7s;
 }
 
-.infoCard div {
+.infoCard:hover .enabled ~ div h3 i {
+  color: #f0efef;
+  -webkit-transition: color .7s;
+  transition: color .7s;
+}
+
+.infoCard .content {
   position: relative;
   z-index: 2;
 }
 
-.infoCard div h3 {
+.infoCard:nth-child(1) .content i {
+  color: #ed174d;
+}
+
+.infoCard:nth-child(2) .content i {
+  color: #017bc3;
+}
+
+.infoCard:nth-child(3) .content i {
+  color: #ff4500;
+}
+
+.infoCard:nth-child(1) .content span {
+  display: block;
+}
+
+.infoCard .content h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 20px;
-  font-size: 30px;
   color: #fff;
 }
 
+.infoCard .content h3 i {
+  font-size: 70px;
+}
+
+.infoCard .content h3 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  font-weight: normal;
+}
+
 @media (max-width: 768px) {
-  .infoCard div h3 {
+  .infoCard .content h3 {
     color: #fff !important;
     -webkit-animation: none !important;
             animation: none !important;
   }
 }
 
-.infoCard div p {
-  font-size: 18px;
+.infoCard .content p {
+  font-size: 17px;
   color: #fff;
+  height: 225px;
+  padding: 10px 0;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 @media (max-width: 400px) {
-  .infoCard div p {
+  .infoCard .content p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
-  .infoCard div p {
+  .infoCard .content p {
     color: #fff !important;
     -webkit-animation: none !important;
             animation: none !important;
   }
 }
 
-.infoCard div a {
+.infoCard .content a {
   display: inline-block;
   text-decoration: none;
   margin-top: 20px;
-  background: #fff;
+  background: #f2f2f2;
   color: #777;
   padding: 6px 9px;
   font-weight: 600;
   border-radius: 5px;
+  position: relative;
+  bottom: 0px;
+}
+
+.infoCard .content a i {
+  position: relative;
+  top: 2px;
+  padding-left: 2px;
 }
 
 @media (max-width: 400px) {
@@ -154,6 +209,13 @@
 }
 
 @media (max-width: 768px) {
+  .infoCard:hover .enabled {
+    -webkit-transform: translateY(0px) !important;
+            transform: translateY(0px) !important;
+  }
+  .infoCard h3 i {
+    color: #f0efef !important;
+  }
   .infoCard:nth-child(1) {
     background: #ec164c;
   }
