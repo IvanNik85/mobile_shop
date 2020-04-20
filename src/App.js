@@ -14,14 +14,12 @@ import {ProductProvider} from './Context'
 function App() {
     return (
        <ProductProvider>  
-           <Navbar />   
-           {/* <Home />    */}
+           <Navbar />             
            <Router>
                <Switch>                  
                    <Route exact path="/" component={Home} /> 
                    <Route path="/ProductList" component={ProductList} />                 
-                   <Route path="/Details" component={Details} />
-                   {/* <Route path="/Contact" component={Contact} /> */}
+                   <Route path="/Details" component={Details} />                   
                    <Route path="/Cart" component={Cart} />                   
                    <Route component={Default} />
                </Switch>

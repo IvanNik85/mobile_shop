@@ -10,8 +10,7 @@ export default class Details extends Component {
     state = {
         image: []
     }
-    componentDidMount() { 
-        console.log(MapElement())
+    componentDidMount() {        
         let smallImg = document.querySelectorAll(`.imageSlider ol.carousel-indicators li`);
         Array.from(smallImg).map((img,i) => {
             img.style.background = `url("../../${MapElement()[i]}") no-repeat center`
@@ -34,7 +33,7 @@ export default class Details extends Component {
                         let array = [];                       
                         array = [img, ...additional_img];                     
                         return array;
-                    }                
+                    }    
                     return (                        
                         <div className="container">
                             <div className="row">
@@ -64,8 +63,7 @@ export default class Details extends Component {
                                                 alt="Third slide"
                                             />                                            
                                         </Carousel.Item>
-                                    </Carousel>
-                                    {/* <img src={img} className="img-fluid" alt={title} /> */}
+                                    </Carousel>                                    
                                 </div>
                                 <div className="col-10 col-md-6 mx-auto pt-4 details">
                                     <h3>Model: {title}</h3>

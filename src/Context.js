@@ -8,7 +8,7 @@ class ProductProvider extends Component {
     state = {
         products: [],
         detailProduct: detailProduct,
-        cart: [], //storeProducts,
+        cart: JSON.parse(localStorage.getItem(`inCart`)) || [], //storeProducts,
         modalOpen: false,
         modalProduct: detailProduct,
         cartSubtotal: 0,
@@ -22,12 +22,17 @@ class ProductProvider extends Component {
     //set copy of products so storeProducts stay intacted
     setProducts = () => {
         let copyProducts = [];
+        let id = [];
         storeProducts.forEach(item => {
             const oneProduct = {...item};
             copyProducts = [...copyProducts, oneProduct];
         })
+        id = this.state.cart.map(cart => cart.id);
+        id.map(i => copyProducts.map(copy => copy.id === i && (copy.inCart = true)));    
         this.setState(() => {
             return {products: copyProducts} 
+        }, () => {
+            this.state.cart && this.addTotal();           
         })
     }
     getItem = (id) => {
@@ -38,10 +43,13 @@ class ProductProvider extends Component {
         const product = this.getItem(id);
         this.setState({detailProduct: product})
     }
+    updateStorage = () => {
+        localStorage.setItem(`inCart`, JSON.stringify(this.state.cart));
+    }  
     addToCart = (id) => {
         let tempProducts = [...this.state.products];
         const index = tempProducts.indexOf(this.getItem(id));
-        const product = tempProducts[index];
+        const product = tempProducts[index];      
         product.inCart = true;
         product.count = 1;
         product.total = product.price;
@@ -50,6 +58,9 @@ class ProductProvider extends Component {
                     cart: [...this.state.cart, product]}
         }, () => {
             this.addTotal();
+            this.updateStorage();
+            // console.log(this.state.cart)
+            // console.log(this.state.product)
         }
             )        
         }
@@ -83,6 +94,7 @@ class ProductProvider extends Component {
             }
         }, () => {
             this.addTotal();
+            this.updateStorage();
         })
     }
 
@@ -101,6 +113,7 @@ class ProductProvider extends Component {
                 }
             }, () => {
                 this.addTotal();
+                this.updateStorage();
             })
         }      
     }
@@ -124,6 +137,7 @@ class ProductProvider extends Component {
             }
         }, () => {
             this.addTotal();
+            this.updateStorage();
         });
 
     }
@@ -133,7 +147,8 @@ class ProductProvider extends Component {
             return {cart: []};
         }, () => {            
             this.setProducts()
-            this.addTotal();          
+            this.addTotal();   
+            this.updateStorage();       
         })
     }
 
@@ -149,15 +164,11 @@ class ProductProvider extends Component {
                 cartTax: taxRound,
                 cartTotal: total
             }           
-        }, () => {
-            console.log(subTotal)
-            console.log(taxRound)
-            console.log(total)
         });
     }
 
     componentDidMount() {
-        this.setProducts();
+        this.setProducts();        
     }
 
     render() {
