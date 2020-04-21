@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import "./Details.scss"
 import Button from "../Button/Button"
 import Carousel from 'react-bootstrap/Carousel'
-import Product from '../Product/Product'
 
 export default class Details extends Component {
     state = {
@@ -13,7 +12,7 @@ export default class Details extends Component {
     componentDidMount() {        
         let smallImg = document.querySelectorAll(`.imageSlider ol.carousel-indicators li`);
         Array.from(smallImg).map((img,i) => {
-            img.style.background = `url("../../${MapElement()[i]}") no-repeat center`
+            return (img.style.background = `url("../../${MapElement()[i]}") no-repeat center`)
         })
     }
     render() {         

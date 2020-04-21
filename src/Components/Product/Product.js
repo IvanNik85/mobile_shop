@@ -11,7 +11,7 @@ export default class Product extends Component {
     handleLoading = () => {  
         setTimeout(() => {
             this.setState({ isLoading: false })    
-        },2000)  
+        },1000)  
     }
     render() {
         const { id, title, img, price, inCart } = this.props.product;

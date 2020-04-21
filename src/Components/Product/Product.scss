@@ -35,7 +35,8 @@
             width: 60%;
             margin: auto;
             transform: scale(1); 
-            animation: scaleOut 2s ease;      
+            animation: scaleOut 2s ease;           
+            transition: transform .3s;                
         }
     
         p {
@@ -69,6 +70,7 @@
             font-size: 1.4em;
             padding: 2px 8px 2px 6px;
             cursor: pointer;
+
             .inCart {
                 position: absolute;
                 right: -90px;
@@ -86,14 +88,13 @@
                 right: 0;
                 transform: translate(-20%, 100%) !important;  
             }       
-        }        
+        }  
         &:hover {
             box-shadow: 2px 2px 12px #000;
             transition: .2s;
         }
         &:hover img{
-            transform: scale(1.175);
-            transition: .2s;
+            transform: scale(1.175);            
         }
         &:hover .cartBtn{
             display: block;

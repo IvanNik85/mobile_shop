@@ -2,7 +2,7 @@ export const storeProducts = [
     {
         id: 1,
         title: "Huawei Honor 20 lite",
-        img: "images/huawei-honor-20-lite.jpg",
+        img: "images/huawei-honor-20-lite.png",
         additional_img: ["images/additional_img/huawei_honor_20_lite_1.jpg", "images/additional_img/huawei_honor_20_lite_2.jpg"],
         price: 208.99,
         description: 
@@ -43,7 +43,7 @@ export const storeProducts = [
     {
         id: 3,
         title: "Nokia 8.1",
-        img: "images/Nokia-8.1.jpg",
+        img: "images/Nokia-8.1.png",
         additional_img: ["images/additional_img/Nokia-81-1.jpg", "images/additional_img/Nokia-81-2.jpg"],
         price: 299.99,
         description: 
@@ -66,7 +66,7 @@ export const storeProducts = [
     {
         id: 4,
         title: "Apple iPhone XS 512GB Dual sim",
-        img: "images/IPhone-XS.jpg",
+        img: "images/IPhone-XS.png",
         additional_img: ["images/additional_img/Apple_iPhone_XS_1.jpg", "images/additional_img/Apple_iPhone_XS_2.jpg"],
         price: 1291.99,
         description: 
@@ -78,7 +78,7 @@ export const storeProducts = [
     {
         id: 5,
         title: "Samsung Galaxy A50",
-        img: "images/samsung-galaxy-a50.jpg",
+        img: "images/samsung-galaxy-a50.png",
         additional_img: ["images/additional_img/Samsung_Galaxy_A50_1.jpg", "images/additional_img/Samsung_Galaxy_A50_2.jpg"],
         price: 272.99,
         description: 
@@ -92,7 +92,7 @@ export const storeProducts = [
     {
         id: 6,
         title: "LG G6",
-        img: "images/lg-g6.jpg",
+        img: "images/lg-g6.png",
         additional_img: ["images/additional_img/LG-G6-1.jpg", "images/additional_img/LG-G6-2.jpg"],
         price: 316.99,
         description: 
@@ -128,7 +128,7 @@ export const storeProducts = [
     {
         id: 7,
         title: "Huawei Honor View 20",
-        img: "images/huawei_honor_View_20.jpg",
+        img: "images/huawei_honor_View_20.png",
         additional_img: ["images/additional_img/huawei-honor-view-20-1.jpg", "images/additional_img/huawei-honor-view-20-2.jpg"],
         price: 402.99,
         description: 
@@ -141,8 +141,8 @@ export const storeProducts = [
     }, 
     {
         id: 8,
-        title: "Xiaomi Mi 9 6GB/128GB Dual Sim",
-        img: "images/xiaomi-mi-9-6gb-128gb-dual.jpg",
+        title: "Xiaomi Mi 9 6GB/128GB Dual",
+        img: "images/xiaomi-mi-9-6gb-128gb-dual.png",
         additional_img: ["images/additional_img/Xiaomi-Mi-9-1.jpg", "images/additional_img/Xiaomi-Mi-9-2.jpg"],
         price: 379,
         description: 
@@ -168,7 +168,7 @@ export const storeProducts = [
     {
         id: 9,
         title: "Samsung Galaxy S10+",
-        img: "images/samsung-galaxy-s10+.jpg",
+        img: "images/samsung-galaxy-s10+.png",
         additional_img: ["images/additional_img/samsung_s10_black_1.jpg", "images/additional_img/samsung_s10_black_2.jpg"],
         price: 784.99,
         description: 
@@ -202,7 +202,7 @@ export const storeProducts = [
     {
         id: 10,
         title: "Huawei P30 8GB/128GB Dual sim",
-        img: "images/huawei_p30.jpg",
+        img: "images/huawei_p30.png",
         additional_img: ["images/additional_img/Huawei-P30-1.jpg", "images/additional_img/Huawei-P30-2.jpg"],
         price: 561.99,
         description: 
@@ -251,7 +251,7 @@ export const storeProducts = [
     {
         id: 12,
         title: "LG V40 ThinQ",
-        img: "images/LG_V40_ThinQ.jpg",
+        img: "images/LG_V40_ThinQ.png",
         additional_img: ["images/additional_img/LG-V40-ThinQ-1.jpg", "images/additional_img/LG-V40-ThinQ-2.jpg"],
         price: 469.99,
         description: 

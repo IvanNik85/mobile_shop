@@ -26,6 +26,7 @@ html {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  top: 0;
   right: 0;
   height: 300px;
   width: 300px;
@@ -167,7 +168,7 @@ html {
 .animImages .rec {
   width: 250px;
   height: 250px;
-  border: 1px solid #9e9d9d;
+  border: 2px solid #9e9d9d;
   -webkit-transform: translate(0px, 0px) rotate(45deg);
           transform: translate(0px, 0px) rotate(45deg);
   display: -webkit-box;
@@ -179,7 +180,21 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: transparent;
+}
+
+.animImages .rec:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.animImages .rec:before:hover img {
+  background-size: 120% 120% !important;
 }
 
 .animImages .firstImg {
@@ -207,18 +222,18 @@ html {
 }
 
 .animImages .thirAnim {
-  -webkit-animation: translateDiv 1.5s forwards;
-          animation: translateDiv 1.5s forwards;
+  -webkit-animation: translateDiv ease 1.7s forwards;
+          animation: translateDiv ease 1.7s forwards;
 }
 
 .animImages .firAnim {
-  -webkit-animation: translateOne 1.5s forwards;
-          animation: translateOne 1.5s forwards;
+  -webkit-animation: translateOne ease 1.7s forwards;
+          animation: translateOne ease 1.7s forwards;
 }
 
 .animImages .secAnim {
-  -webkit-animation: translateCentral 1.5s forwards;
-          animation: translateCentral 1.5s forwards;
+  -webkit-animation: translateCentral ease 1.7s forwards;
+          animation: translateCentral ease 1.7s forwards;
 }
 
 @-webkit-keyframes translateDiv {
@@ -287,8 +302,8 @@ html {
             transform: translate(0px, 0px) rotate(45deg);
   }
   100% {
-    -webkit-transform: translate(0px, 140%) rotate(45deg);
-            transform: translate(0px, 140%) rotate(45deg);
+    -webkit-transform: translate(0px, 350px) rotate(45deg);
+            transform: translate(0px, 350px) rotate(45deg);
   }
 }
 
@@ -298,8 +313,8 @@ html {
             transform: translate(0px, 0px) rotate(45deg);
   }
   100% {
-    -webkit-transform: translate(0px, 140%) rotate(45deg);
-            transform: translate(0px, 140%) rotate(45deg);
+    -webkit-transform: translate(0px, 350px) rotate(45deg);
+            transform: translate(0px, 350px) rotate(45deg);
   }
 }
 

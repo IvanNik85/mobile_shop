@@ -3,7 +3,7 @@ import "./NewsModal.scss"
 
 export default class NewsModal extends Component {
     render() {
-        const {id, title, img, text} = this.props.data;
+        const {title, img, text} = this.props.data;
         const {modalTrue} = this.props;        
         if(!modalTrue) {
             return null

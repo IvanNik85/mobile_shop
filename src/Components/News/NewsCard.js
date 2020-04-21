@@ -1,7 +1,6 @@
 import React from "react"
 import { ProductConsumer } from '../../Context'
 import "./NewsCard.scss"
-import NewsModal from "../../UI/NewsModal/NewsModal"
 
 export default class NewsCard extends React.Component { 
     state = {
@@ -14,7 +13,7 @@ export default class NewsCard extends React.Component {
                 {value => {
                     return (                        
                         <div className="col-12 col-md-10 col-xl-9 news">   
-                            <div className="image"><img src={img} alt={`image${id}}`}/></div>
+                            <div className="image"><img src={img} alt={`img${id}}`}/></div>
                             <div className="text">
                                 <h5>{title}</h5>
                                 <p>{text}</p>

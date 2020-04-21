@@ -11,7 +11,7 @@ import ScrollTop from '../../UI/ScrollTop/ScrollTop'
 
 export default class Home extends React.Component {
     state = {
-        visible: false,        
+        visible: false,
         im: []
     }
     myref = React.createRef();
@@ -21,7 +21,7 @@ export default class Home extends React.Component {
         } else {
             return { rootMargin: "-150px 0px" }
         }
-    }   
+    }
     observer = new IntersectionObserver(entries => {
         if (entries[0].intersectionRatio > 0) {
             this.setState({ visible: true });
@@ -29,11 +29,11 @@ export default class Home extends React.Component {
             this.setState({ visible: false });
         }
     }, this.options())
-   
+
     componentDidMount() {
-        this.observer.observe(this.myref.current)   
-        this.imagesMap() 
-    }    
+        this.observer.observe(this.myref.current)
+        this.imagesMap()
+    }
 
     imagesMap() {
         const sources = images.map(img => img.src)
@@ -44,30 +44,32 @@ export default class Home extends React.Component {
             arr = arr.filter((item, index) => {
                 return arr.indexOf(item) === index
             })
-        } while(arr.length < 3)
+        } while (arr.length < 3)
         const randThree = arr.map(item => sources[item])
-        this.setState({im: randThree})
+        this.setState({ im: randThree })
     }
 
     render() {
-        const styleIt = { animation: 'show 2s ease forwards' }   
+        const styleIt = { animation: 'show 2s ease forwards' }
         return (
             <div>
                 <MainClass />
                 <Info />
                 <div className="container-fluid Home" id="Home" ref={this.myref}>
                     <div className="row">
-                        {/* <img src={mainImage} className="img-fluid mainImg" alt="mainImage"/> */}                           
                         <div className="animImages">
-                            <div className={`rec firstImg ${this.state.visible?"firAnim" : ''}`} >
+                            <div className={`rec firstImg ${this.state.visible ? "firAnim" : ''}`} >
                                 <img src={this.state.im[0]} alt="phoneOne" />
-                                </div>
-                            <div className={`rec secondImg ${this.state.visible?"secAnim" : ''}`}>
+                                <Link to='/ProductList' />
+                            </div>
+                            <div className={`rec secondImg ${this.state.visible ? "secAnim" : ''}`}>
                                 <img src={this.state.im[1]} alt="phoneTwo" />
-                                </div>
-                            <div className={`rec thirdImg ${this.state.visible?"thirAnim" : ''}`}>
+                                <Link to='/ProductList' />
+                            </div>
+                            <div className={`rec thirdImg ${this.state.visible ? "thirAnim" : ''}`}>
                                 <img src={this.state.im[2]} alt="phoneThree" />
-                                </div>
+                                <Link to='/ProductList' />
+                            </div>
                         </div>
                         <div className="mainButtons" style={this.state.visible ? styleIt : null}>
                             <div className="pulse">
@@ -82,12 +84,12 @@ export default class Home extends React.Component {
                                     <div className="backPulse"></div>
                                 </Link>
                             </div>
-                        </div>                      
+                        </div>
                     </div>
                 </div>
                 <News />
                 <Contact />
-                <ScrollTop />            
+                <ScrollTop />
             </div>
         )
     }
