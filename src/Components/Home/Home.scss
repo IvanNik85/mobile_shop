@@ -1,4 +1,9 @@
 @import "../../index.scss";
+
+.MainPage {
+    scroll-behavior: smooth;    
+}
+
 .Home {    
     position: relative;  
     min-height: 600px;  
@@ -19,7 +24,7 @@
         opacity: 0;             
 
         .pulse {
-            display: inline-block;
+            display: block;
             position: relative;
             text-align: center;       
             border: 3px solid #ce1038;
@@ -87,6 +92,7 @@
         }
     } 
 }
+
 //animated images
 .animImages {
     position: relative;

@@ -8,6 +8,7 @@ import CartTotal from './CartTotal'
 
 export default class Cart extends Component {
     render() {
+        window.scrollTo(0, 0);
         return (
             <ProductConsumer>  
                 {value => {

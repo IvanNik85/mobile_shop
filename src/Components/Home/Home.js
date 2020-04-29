@@ -52,7 +52,7 @@ export default class Home extends React.Component {
     render() {
         const styleIt = { animation: 'show 2s ease forwards' }
         return (
-            <div>
+            <div className="MainPage">
                 <MainClass />
                 <Info />
                 <div className="container-fluid Home" id="Home" ref={this.myref}>

@@ -14,6 +14,7 @@ export default class Product extends Component {
         },1000)  
     }
     render() {
+        window.scrollTo(0, 0);
         const { id, title, img, price, inCart } = this.props.product;
         return (
             <ProductConsumer>

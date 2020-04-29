@@ -13,10 +13,6 @@ code {
     monospace;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 @function color($colorName) {
   @return map-get($colors, $colorName)
 }

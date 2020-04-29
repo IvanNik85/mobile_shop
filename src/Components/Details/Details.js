@@ -16,6 +16,7 @@ export default class Details extends Component {
         })
     }
     render() {         
+        window.scrollTo(0, 0);
         return (
             <ProductConsumer>
                 {value => {
