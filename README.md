@@ -1,6 +1,6 @@
 # mobile_shop
 
-https://ica-mobile-shop.netlify.com
+https://ica-mobile-shop.netlify.app
 
 React E-commerce Mobile shop. 
 
